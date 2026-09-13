@@ -6,10 +6,13 @@
 
 <title>AL UBAIDILLAH TRAVEL | Umroh, Haji & Wisata Halal</title>
 
-<meta name="description" content="AL UBAIDILLAH TRAVEL melayani konsultasi perjalanan Umroh, Haji dan Wisata Halal dengan informasi yang jelas, nyaman dan amanah.">
-<meta name="keywords" content="Al Ubaidillah Travel, travel umroh, travel haji, wisata halal, umroh Indonesia, haji Indonesia">
+<meta name="description"
+content="AL UBAIDILLAH TRAVEL melayani kebutuhan perjalanan Umroh, Haji dan Wisata Halal dengan pelayanan amanah, nyaman dan profesional. Konsultasi melalui WhatsApp.">
+
+<meta name="keywords"
+content="travel umroh, travel haji, wisata halal, umroh Indonesia, haji, Al Ubaidillah Travel">
+
 <meta name="author" content="AL UBAIDILLAH TRAVEL">
-<meta name="theme-color" content="#071426">
 
 <meta property="og:title" content="AL UBAIDILLAH TRAVEL | Umroh, Haji & Wisata Halal">
 <meta property="og:description" content="Melayani Perjalanan Ibadah dengan Amanah dan Nyaman.">
@@ -17,17 +20,18 @@
 
 <style>
 :root{
-  --navy:#071426;
-  --navy2:#0b1d35;
-  --navy3:#102945;
-  --gold:#d6ad55;
-  --gold2:#f0cf7a;
+  --navy:#07152f;
+  --navy2:#0d2145;
+  --gold:#d8ad4c;
+  --gold2:#f1d98a;
   --white:#ffffff;
-  --muted:#aeb9c8;
-  --line:rgba(255,255,255,.10);
+  --text:#17233d;
+  --muted:#68738a;
+  --light:#f7f8fb;
   --green:#25D366;
-  --green2:#128C7E;
-  --shadow:0 20px 60px rgba(0,0,0,.30);
+  --green-dark:#128C7E;
+  --shadow:0 20px 55px rgba(7,21,47,.12);
+  --radius:22px;
 }
 
 *{
@@ -39,11 +43,8 @@
 
 body{
   font-family:Arial,Helvetica,sans-serif;
-  background:
-    radial-gradient(circle at 15% 10%,rgba(214,173,85,.10),transparent 25%),
-    radial-gradient(circle at 85% 30%,rgba(30,100,170,.12),transparent 25%),
-    var(--navy);
-  color:var(--white);
+  color:var(--text);
+  background:#fff;
   line-height:1.7;
   overflow-x:hidden;
 }
@@ -53,253 +54,185 @@ a{
   color:inherit;
 }
 
+img{
+  max-width:100%;
+  display:block;
+}
+
 .container{
-  width:min(1180px,92%);
+  width:min(1160px,92%);
   margin:auto;
 }
 
-section{
-  padding:90px 0;
+/* =========================
+   WHATSAPP SVG
+========================= */
+
+.wa-icon{
+  width:21px;
+  height:21px;
+  flex:none;
+  display:inline-block;
 }
 
-.section-head{
-  max-width:720px;
-  margin:0 auto 45px;
-  text-align:center;
+.wa-icon.large{
+  width:27px;
+  height:27px;
 }
 
-.section-head .eyebrow{
-  color:var(--gold2);
-  text-transform:uppercase;
-  letter-spacing:3px;
-  font-size:12px;
-  font-weight:bold;
-  margin-bottom:10px;
+.wa-icon.small{
+  width:18px;
+  height:18px;
 }
 
-.section-head h2{
-  font-size:clamp(30px,5vw,48px);
-  line-height:1.15;
-  margin-bottom:15px;
+.wa-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
 }
 
-.section-head p{
-  color:var(--muted);
-}
-
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
 
 header{
   position:fixed;
   top:0;
   left:0;
   width:100%;
-  z-index:1000;
-  background:rgba(7,20,38,.88);
-  backdrop-filter:blur(18px);
-  border-bottom:1px solid var(--line);
+  z-index:999;
+  background:rgba(7,21,47,.94);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(216,173,76,.15);
 }
 
 .nav{
-  min-height:76px;
+  height:78px;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:25px;
 }
 
-.brand{
+.logo{
   display:flex;
   align-items:center;
   gap:12px;
+  color:#fff;
+  font-weight:800;
+  letter-spacing:1px;
 }
 
-.brand-logo{
-  width:46px;
-  height:46px;
-  border:1px solid rgba(240,207,122,.55);
+.logo-mark{
+  width:43px;
+  height:43px;
+  border:1px solid var(--gold);
   border-radius:14px;
   display:grid;
   place-items:center;
-  background:
-    linear-gradient(145deg,rgba(214,173,85,.18),rgba(255,255,255,.03));
-  box-shadow:0 8px 25px rgba(0,0,0,.25);
   color:var(--gold2);
   font-size:22px;
+  box-shadow:0 0 20px rgba(216,173,76,.14);
 }
 
-.brand-text strong{
-  display:block;
-  font-size:15px;
-  letter-spacing:1.5px;
+.logo-text{
+  font-size:14px;
+  line-height:1.2;
 }
 
-.brand-text span{
+.logo-text span{
   display:block;
   color:var(--gold2);
-  font-size:10px;
+  font-size:9px;
   letter-spacing:2px;
+  margin-top:4px;
 }
 
-nav{
+.nav-links{
   display:flex;
   align-items:center;
-  gap:22px;
+  gap:23px;
 }
 
-nav a{
-  color:#dbe3ed;
+.nav-links a{
+  color:#e9edf5;
   font-size:13px;
+  font-weight:600;
   transition:.25s;
 }
 
-nav a:hover{
+.nav-links a:hover{
   color:var(--gold2);
 }
 
 .nav-wa{
-  display:flex;
-  align-items:center;
-  gap:8px;
-  padding:9px 15px;
-  border-radius:999px;
   background:var(--green);
-  color:#06130c;
-  font-weight:bold;
+  color:#fff!important;
+  padding:10px 15px;
+  border-radius:12px;
+  box-shadow:0 8px 22px rgba(37,211,102,.22);
+}
+
+.nav-wa:hover{
+  background:#1ebe5b;
+  transform:translateY(-2px);
 }
 
 .menu-btn{
   display:none;
-  width:44px;
-  height:44px;
-  border:1px solid var(--line);
+  width:43px;
+  height:43px;
+  border:1px solid rgba(255,255,255,.18);
   border-radius:12px;
   background:transparent;
-  color:white;
-  font-size:23px;
+  color:#fff;
+  font-size:22px;
   cursor:pointer;
 }
 
-/* WHATSAPP ICON */
-
-.wa-icon{
-  width:23px;
-  height:23px;
-  border-radius:50%;
-  background:var(--green);
-  display:inline-grid;
-  place-items:center;
-  color:white;
-  font-weight:bold;
-  font-size:14px;
-  position:relative;
-  flex:none;
-}
-
-.wa-icon::before{
-  content:"";
-  width:9px;
-  height:12px;
-  border:2px solid white;
-  border-radius:50%;
-  transform:rotate(-42deg);
-  display:block;
-}
-
-.wa-icon::after{
-  content:"";
-  position:absolute;
-  width:5px;
-  height:5px;
-  border-left:2px solid white;
-  border-bottom:2px solid white;
-  left:5px;
-  bottom:2px;
-  transform:rotate(-12deg);
-}
-
-.wa-big{
-  width:48px;
-  height:48px;
-  font-size:18px;
-}
-
-.wa-floating{
-  position:fixed;
-  right:22px;
-  bottom:22px;
-  width:62px;
-  height:62px;
-  border-radius:50%;
-  background:var(--green);
-  display:grid;
-  place-items:center;
-  z-index:999;
-  box-shadow:0 15px 35px rgba(0,0,0,.35);
-  transition:.25s;
-  animation:pulse 2s infinite;
-}
-
-.wa-floating:hover{
-  transform:scale(1.08);
-}
-
-.wa-floating .wa-icon{
-  width:34px;
-  height:34px;
-  background:transparent;
-}
-
-.wa-floating .wa-icon::before{
-  width:13px;
-  height:17px;
-  border-width:3px;
-}
-
-.wa-floating .wa-icon::after{
-  left:7px;
-  bottom:1px;
-}
-
-@keyframes pulse{
-  0%,100%{box-shadow:0 0 0 0 rgba(37,211,102,.35),0 15px 35px rgba(0,0,0,.35);}
-  50%{box-shadow:0 0 0 13px rgba(37,211,102,0),0 15px 35px rgba(0,0,0,.35);}
-}
-
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .hero{
   min-height:100vh;
-  padding-top:150px;
+  background:
+    radial-gradient(circle at 80% 20%,rgba(216,173,76,.16),transparent 30%),
+    radial-gradient(circle at 15% 80%,rgba(39,87,160,.20),transparent 32%),
+    linear-gradient(135deg,#06132c,#0b2146 65%,#07152f);
+  color:#fff;
+  position:relative;
   display:flex;
   align-items:center;
-  position:relative;
   overflow:hidden;
+  padding:120px 0 70px;
 }
 
 .hero::before{
   content:"";
   position:absolute;
-  width:500px;
-  height:500px;
-  border-radius:50%;
-  border:1px solid rgba(214,173,85,.12);
-  right:-170px;
-  top:120px;
+  width:600px;
+  height:600px;
+  border:1px solid rgba(216,173,76,.12);
+  transform:rotate(45deg);
+  right:-260px;
+  top:100px;
 }
 
 .hero::after{
   content:"";
   position:absolute;
-  width:340px;
-  height:340px;
-  border-radius:50%;
-  border:1px solid rgba(214,173,85,.08);
-  right:-90px;
-  top:200px;
+  width:350px;
+  height:350px;
+  border:1px solid rgba(216,173,76,.08);
+  transform:rotate(45deg);
+  left:-190px;
+  bottom:-160px;
 }
 
 .hero-grid{
+  position:relative;
+  z-index:2;
   display:grid;
   grid-template-columns:1.1fr .9fr;
   gap:55px;
@@ -311,16 +244,25 @@ nav a:hover{
   align-items:center;
   gap:8px;
   padding:8px 14px;
-  border:1px solid rgba(214,173,85,.30);
-  border-radius:999px;
+  border:1px solid rgba(216,173,76,.38);
+  border-radius:100px;
   color:var(--gold2);
-  background:rgba(214,173,85,.07);
   font-size:12px;
-  margin-bottom:20px;
+  letter-spacing:.5px;
+  background:rgba(255,255,255,.035);
+  margin-bottom:22px;
+}
+
+.badge-dot{
+  width:7px;
+  height:7px;
+  background:var(--gold);
+  border-radius:50%;
+  box-shadow:0 0 12px var(--gold);
 }
 
 .hero h1{
-  font-size:clamp(42px,7vw,78px);
+  font-size:clamp(40px,6vw,76px);
   line-height:1.03;
   letter-spacing:-2px;
   margin-bottom:22px;
@@ -331,8 +273,8 @@ nav a:hover{
 }
 
 .hero p{
-  color:var(--muted);
   max-width:650px;
+  color:#d4dbea;
   font-size:17px;
   margin-bottom:30px;
 }
@@ -344,123 +286,138 @@ nav a:hover{
 }
 
 .btn{
+  min-height:50px;
+  padding:0 19px;
+  border-radius:13px;
   display:inline-flex;
   align-items:center;
   justify-content:center;
   gap:9px;
-  min-height:48px;
-  padding:0 21px;
-  border-radius:12px;
-  border:1px solid var(--line);
-  font-weight:bold;
-  font-size:13px;
+  font-weight:700;
+  font-size:14px;
   transition:.25s;
+  border:1px solid transparent;
   cursor:pointer;
 }
 
-.btn:hover{
-  transform:translateY(-3px);
+.btn-gold{
+  background:linear-gradient(135deg,var(--gold),var(--gold2));
+  color:#101a2f;
+  box-shadow:0 13px 30px rgba(216,173,76,.20);
 }
 
-.btn-gold{
-  background:linear-gradient(135deg,var(--gold2),var(--gold));
-  color:#091525;
-  border:none;
+.btn-gold:hover{
+  transform:translateY(-3px);
 }
 
 .btn-wa{
   background:var(--green);
-  color:#041008;
-  border:none;
+  color:#fff;
+  box-shadow:0 13px 30px rgba(37,211,102,.18);
+}
+
+.btn-wa:hover{
+  background:#1ebe5b;
+  transform:translateY(-3px);
 }
 
 .btn-outline{
+  border-color:rgba(255,255,255,.22);
+  color:#fff;
   background:rgba(255,255,255,.03);
-  color:white;
+}
+
+.btn-outline:hover{
+  border-color:var(--gold);
+  color:var(--gold2);
 }
 
 .hero-card{
-  min-height:500px;
-  border:1px solid var(--line);
-  border-radius:30px;
-  background:
-    linear-gradient(145deg,rgba(255,255,255,.08),rgba(255,255,255,.015)),
-    radial-gradient(circle at 50% 25%,rgba(214,173,85,.14),transparent 35%);
-  box-shadow:var(--shadow);
-  padding:28px;
   position:relative;
+  min-height:430px;
+  border:1px solid rgba(216,173,76,.24);
+  border-radius:32px;
+  background:
+    linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.025));
+  backdrop-filter:blur(12px);
+  box-shadow:0 30px 80px rgba(0,0,0,.22);
   overflow:hidden;
+  padding:30px;
 }
 
 .hero-card::before{
   content:"";
   position:absolute;
-  width:260px;
-  height:260px;
-  border:1px solid rgba(240,207,122,.30);
+  width:250px;
+  height:250px;
+  border:1px solid rgba(216,173,76,.18);
   transform:rotate(45deg);
-  top:80px;
-  left:50%;
-  margin-left:-130px;
+  right:-100px;
+  top:-90px;
 }
 
-.hero-emblem{
-  position:absolute;
-  width:150px;
-  height:150px;
-  border-radius:50%;
-  border:1px solid rgba(240,207,122,.45);
-  left:50%;
-  top:135px;
-  transform:translateX(-50%);
+.kaaba-art{
+  width:180px;
+  height:180px;
+  margin:30px auto 24px;
   display:grid;
   place-items:center;
-  background:rgba(7,20,38,.7);
-  box-shadow:0 0 60px rgba(214,173,85,.12);
+  position:relative;
 }
 
-.crescent{
-  font-size:70px;
-  color:var(--gold2);
-  line-height:1;
+.kaaba{
+  width:112px;
+  height:105px;
+  background:#111;
+  border-radius:5px;
+  position:relative;
+  box-shadow:0 20px 45px rgba(0,0,0,.35);
 }
 
-.hero-mini{
+.kaaba::before{
+  content:"";
   position:absolute;
-  left:28px;
-  right:28px;
-  bottom:28px;
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:10px;
+  top:26px;
+  left:0;
+  width:100%;
+  height:14px;
+  background:var(--gold);
 }
 
-.hero-mini div{
-  padding:15px 10px;
+.kaaba::after{
+  content:"";
+  position:absolute;
+  top:57px;
+  left:45px;
+  width:23px;
+  height:29px;
+  border:3px solid var(--gold);
+}
+
+.hero-card-content{
   text-align:center;
-  border:1px solid var(--line);
-  border-radius:16px;
-  background:rgba(0,0,0,.16);
+  position:relative;
+  z-index:2;
 }
 
-.hero-mini strong{
-  display:block;
-  color:var(--gold2);
-  font-size:19px;
+.hero-card-content h3{
+  font-size:24px;
+  margin-bottom:8px;
 }
 
-.hero-mini span{
-  color:var(--muted);
-  font-size:10px;
+.hero-card-content p{
+  color:#c7cfdf;
+  font-size:13px;
+  margin:0 auto 20px;
 }
 
-/* TRUST */
+/* =========================
+   TRUST
+========================= */
 
 .trust{
-  padding:18px 0;
-  border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-  background:rgba(255,255,255,.025);
+  background:#fff;
+  border-bottom:1px solid #e8ebf1;
 }
 
 .trust-grid{
@@ -469,57 +426,99 @@ nav a:hover{
 }
 
 .trust-item{
+  padding:23px 15px;
   text-align:center;
-  padding:15px;
-  border-right:1px solid var(--line);
+  border-right:1px solid #edf0f5;
 }
 
 .trust-item:last-child{
-  border-right:none;
+  border-right:0;
 }
 
 .trust-item strong{
   display:block;
-  color:var(--gold2);
-  font-size:20px;
+  color:var(--navy);
+  font-size:24px;
 }
 
 .trust-item span{
   color:var(--muted);
-  font-size:11px;
+  font-size:12px;
 }
 
-/* PROGRAM */
+/* =========================
+   SECTION
+========================= */
 
-.program-switch{
+section{
+  padding:95px 0;
+}
+
+.section-head{
+  text-align:center;
+  max-width:720px;
+  margin:0 auto 45px;
+}
+
+.eyebrow{
+  color:#a67d22;
+  font-weight:800;
+  font-size:12px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:10px;
+}
+
+.section-head h2{
+  font-size:clamp(30px,4vw,45px);
+  line-height:1.1;
+  color:var(--navy);
+  margin-bottom:14px;
+}
+
+.section-head p{
+  color:var(--muted);
+}
+
+/* =========================
+   PROGRAM
+========================= */
+
+.program{
+  background:var(--light);
+}
+
+.tabs{
   display:flex;
   justify-content:center;
-  gap:8px;
-  margin-bottom:30px;
   flex-wrap:wrap;
+  gap:9px;
+  margin-bottom:30px;
 }
 
-.switch-btn{
-  border:1px solid var(--line);
-  background:rgba(255,255,255,.03);
-  color:#dbe3ed;
+.tab{
+  border:1px solid #dfe4ed;
+  background:#fff;
+  color:var(--navy);
+  border-radius:100px;
   padding:11px 18px;
-  border-radius:999px;
   cursor:pointer;
-  font-weight:bold;
+  font-weight:700;
+  font-size:13px;
 }
 
-.switch-btn.active{
-  background:var(--gold2);
-  color:#081425;
-  border-color:var(--gold2);
+.tab.active,
+.tab:hover{
+  background:var(--navy);
+  color:#fff;
+  border-color:var(--navy);
 }
 
-.program-panel{
+.tab-panel{
   display:none;
 }
 
-.program-panel.active{
+.tab-panel.active{
   display:block;
 }
 
@@ -530,95 +529,141 @@ nav a:hover{
 }
 
 .card{
-  border:1px solid var(--line);
-  background:
-    linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.018));
-  border-radius:22px;
+  background:#fff;
+  border:1px solid #e5e9f0;
+  border-radius:var(--radius);
   padding:26px;
+  box-shadow:var(--shadow);
   transition:.3s;
 }
 
 .card:hover{
-  transform:translateY(-7px);
-  border-color:rgba(240,207,122,.35);
-  box-shadow:var(--shadow);
+  transform:translateY(-6px);
 }
 
 .card-icon{
-  width:52px;
-  height:52px;
+  width:50px;
+  height:50px;
   border-radius:15px;
   display:grid;
   place-items:center;
-  background:rgba(214,173,85,.10);
-  color:var(--gold2);
+  background:#f6edcf;
+  color:#946d17;
   font-size:23px;
   margin-bottom:18px;
 }
 
 .card h3{
-  margin-bottom:8px;
-  font-size:21px;
+  color:var(--navy);
+  margin-bottom:9px;
 }
 
 .card p{
   color:var(--muted);
   font-size:13px;
+  margin-bottom:16px;
 }
 
-.card-list{
+.card ul{
   list-style:none;
-  margin:18px 0;
 }
 
-.card-list li{
-  color:#d4dce7;
-  font-size:12px;
+.card li{
+  color:#48536a;
+  font-size:13px;
   padding:7px 0;
-  border-bottom:1px dashed rgba(255,255,255,.08);
+  border-bottom:1px dashed #e4e8ef;
 }
 
-.card-list li::before{
-  content:"✓";
-  color:var(--gold2);
-  margin-right:8px;
+.card li:last-child{
+  border-bottom:0;
 }
 
-/* WHY */
-
-.why{
-  background:linear-gradient(180deg,rgba(255,255,255,.015),rgba(255,255,255,.035));
-}
+/* =========================
+   WHY
+========================= */
 
 .why-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:20px;
+  gap:55px;
+  align-items:center;
+}
+
+.why-visual{
+  min-height:440px;
+  border-radius:30px;
+  background:
+    radial-gradient(circle at center,rgba(216,173,76,.16),transparent 35%),
+    linear-gradient(145deg,#07152f,#12335f);
+  position:relative;
+  overflow:hidden;
+  border:1px solid rgba(216,173,76,.18);
+}
+
+.why-visual::before{
+  content:"";
+  position:absolute;
+  width:330px;
+  height:330px;
+  border:1px solid rgba(216,173,76,.2);
+  transform:rotate(45deg);
+  left:50%;
+  top:50%;
+  translate:-50% -50%;
+}
+
+.visual-center{
+  position:absolute;
+  left:50%;
+  top:50%;
+  translate:-50% -50%;
+  text-align:center;
+  color:#fff;
+}
+
+.visual-center .symbol{
+  font-size:70px;
+  color:var(--gold2);
+  margin-bottom:15px;
+}
+
+.visual-center h3{
+  font-size:24px;
+}
+
+.visual-center p{
+  color:#cbd3e3;
+  font-size:13px;
+}
+
+.why-list{
+  display:grid;
+  gap:18px;
 }
 
 .why-item{
   display:flex;
-  gap:16px;
-  padding:24px;
-  border:1px solid var(--line);
-  border-radius:20px;
-  background:rgba(255,255,255,.025);
+  gap:15px;
+  align-items:flex-start;
 }
 
 .why-number{
-  width:43px;
-  height:43px;
+  width:42px;
+  height:42px;
   flex:none;
-  border-radius:13px;
   display:grid;
   place-items:center;
-  background:rgba(214,173,85,.12);
+  background:var(--navy);
   color:var(--gold2);
-  font-weight:bold;
+  border-radius:12px;
+  font-weight:800;
 }
 
 .why-item h3{
-  margin-bottom:6px;
+  font-size:17px;
+  color:var(--navy);
+  margin-bottom:4px;
 }
 
 .why-item p{
@@ -626,250 +671,276 @@ nav a:hover{
   font-size:13px;
 }
 
-/* ABOUT */
+/* =========================
+   ABOUT
+========================= */
+
+.about{
+  background:var(--navy);
+  color:#fff;
+}
 
 .about-grid{
   display:grid;
-  grid-template-columns:.9fr 1.1fr;
-  gap:50px;
+  grid-template-columns:1fr 1fr;
+  gap:55px;
   align-items:center;
 }
 
-.about-visual{
-  min-height:430px;
-  border-radius:28px;
-  border:1px solid var(--line);
-  background:
-    linear-gradient(145deg,rgba(214,173,85,.10),rgba(255,255,255,.02)),
-    repeating-linear-gradient(
-      45deg,
-      rgba(255,255,255,.025) 0,
-      rgba(255,255,255,.025) 1px,
-      transparent 1px,
-      transparent 18px
-    );
-  position:relative;
-  overflow:hidden;
+.about .section-head{
+  text-align:left;
+  margin:0 0 25px;
+}
+
+.about .section-head h2{
+  color:#fff;
+}
+
+.about .section-head p{
+  color:#c8d1e0;
+}
+
+.about-box{
   display:grid;
-  place-items:center;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px;
 }
 
-.about-visual::before{
-  content:"AL UBAIDILLAH";
-  position:absolute;
-  font-size:clamp(35px,6vw,70px);
-  font-weight:bold;
-  color:rgba(255,255,255,.025);
-  transform:rotate(-25deg);
-  white-space:nowrap;
+.about-mini{
+  padding:20px;
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:17px;
+  background:rgba(255,255,255,.035);
 }
 
-.about-seal{
-  width:180px;
-  height:180px;
-  border-radius:50%;
-  border:1px solid rgba(240,207,122,.45);
-  display:grid;
-  place-items:center;
-  text-align:center;
-  color:var(--gold2);
-  position:relative;
-  z-index:1;
-}
-
-.about-seal strong{
+.about-mini strong{
   display:block;
-  font-size:15px;
-  letter-spacing:2px;
-}
-
-.about-seal span{
-  display:block;
-  font-size:10px;
-  color:var(--muted);
-}
-
-.about-content h2{
-  font-size:clamp(30px,5vw,48px);
-  line-height:1.15;
-  margin-bottom:17px;
-}
-
-.about-content p{
-  color:var(--muted);
-  margin-bottom:16px;
-}
-
-.points{
-  display:grid;
-  gap:11px;
-  margin-top:25px;
-}
-
-.point{
-  display:flex;
-  align-items:flex-start;
-  gap:10px;
-  color:#dce4ed;
-  font-size:13px;
-}
-
-.point span{
   color:var(--gold2);
-  font-weight:bold;
+  margin-bottom:5px;
 }
 
-/* PROCESS */
+.about-mini span{
+  color:#c8d1e0;
+  font-size:12px;
+}
 
-.process{
+/* =========================
+   FACILITIES
+========================= */
+
+.facility-grid{
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:15px;
+  gap:18px;
 }
 
-.process-item{
-  padding:24px;
-  border:1px solid var(--line);
-  border-radius:20px;
-  background:rgba(255,255,255,.025);
+.facility{
+  padding:25px 20px;
+  border:1px solid #e4e8ef;
+  border-radius:19px;
+  text-align:center;
+  background:#fff;
+  transition:.3s;
+}
+
+.facility:hover{
+  border-color:#d8ad4c;
+  transform:translateY(-4px);
+}
+
+.facility-icon{
+  font-size:30px;
+  margin-bottom:11px;
+}
+
+.facility h3{
+  color:var(--navy);
+  font-size:15px;
+  margin-bottom:5px;
+}
+
+.facility p{
+  color:var(--muted);
+  font-size:12px;
+}
+
+/* =========================
+   PROCESS
+========================= */
+
+.process{
+  background:var(--light);
+}
+
+.process-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+
+.process-card{
   position:relative;
+  background:#fff;
+  border:1px solid #e3e7ef;
+  border-radius:20px;
+  padding:25px;
 }
 
 .process-number{
+  color:var(--gold);
   font-size:12px;
-  color:var(--gold2);
+  font-weight:900;
   letter-spacing:2px;
-  margin-bottom:20px;
+  margin-bottom:13px;
 }
 
-.process-item h3{
-  font-size:18px;
-  margin-bottom:7px;
+.process-card h3{
+  color:var(--navy);
+  font-size:16px;
+  margin-bottom:6px;
 }
 
-.process-item p{
+.process-card p{
   color:var(--muted);
   font-size:12px;
 }
 
-/* GALLERY */
+/* =========================
+   GALLERY
+========================= */
 
-.gallery{
+.gallery-grid{
   display:grid;
-  grid-template-columns:repeat(5,1fr);
-  gap:12px;
+  grid-template-columns:repeat(3,1fr);
+  gap:17px;
 }
 
-.gallery-box{
+.gallery-item{
   min-height:220px;
   border-radius:20px;
-  border:1px solid var(--line);
   overflow:hidden;
   position:relative;
   background:
-    radial-gradient(circle at 50% 30%,rgba(240,207,122,.18),transparent 25%),
-    linear-gradient(145deg,#102945,#071426);
+    linear-gradient(145deg,#07152f,#17365e);
+  border:1px solid rgba(216,173,76,.18);
+  display:flex;
+  align-items:flex-end;
+  padding:22px;
 }
 
-.gallery-box:nth-child(even){
-  transform:translateY(18px);
-}
-
-.gallery-box::after{
-  content:"";
+.gallery-item::before{
+  content:"✦";
   position:absolute;
-  inset:0;
-  background:linear-gradient(transparent 45%,rgba(0,0,0,.7));
-}
-
-.gallery-label{
-  position:absolute;
-  z-index:2;
-  left:15px;
+  font-size:130px;
+  color:rgba(216,173,76,.08);
   right:15px;
-  bottom:15px;
-  font-size:12px;
-  font-weight:bold;
+  top:10px;
 }
 
-/* CONSULTATION */
+.gallery-item h3{
+  position:relative;
+  z-index:2;
+  color:#fff;
+  font-size:16px;
+}
+
+.gallery-item span{
+  display:block;
+  color:var(--gold2);
+  font-size:11px;
+  margin-top:3px;
+}
+
+/* =========================
+   LEGAL
+========================= */
+
+.legal-box{
+  border:1px solid #e3e7ef;
+  background:#fff;
+  border-radius:25px;
+  padding:32px;
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:25px;
+  align-items:center;
+  box-shadow:var(--shadow);
+}
+
+.legal-box h3{
+  color:var(--navy);
+  margin-bottom:7px;
+}
+
+.legal-box p{
+  color:var(--muted);
+  font-size:13px;
+}
+
+.status{
+  padding:11px 15px;
+  border-radius:100px;
+  background:#fff5d8;
+  color:#876319;
+  font-size:12px;
+  font-weight:800;
+  white-space:nowrap;
+}
+
+/* =========================
+   CONSULTATION
+========================= */
 
 .consult{
   background:
-    radial-gradient(circle at 10% 10%,rgba(214,173,85,.12),transparent 30%),
-    linear-gradient(145deg,rgba(255,255,255,.04),rgba(255,255,255,.015));
+    radial-gradient(circle at 15% 20%,rgba(216,173,76,.16),transparent 30%),
+    var(--navy);
+  color:#fff;
 }
 
 .consult-grid{
   display:grid;
   grid-template-columns:.8fr 1.2fr;
-  gap:35px;
+  gap:45px;
   align-items:start;
 }
 
-.consult-info h2{
-  font-size:clamp(32px,5vw,50px);
-  line-height:1.12;
-  margin-bottom:17px;
+.consult .section-head{
+  text-align:left;
+  margin:0;
 }
 
-.consult-info p{
-  color:var(--muted);
-  margin-bottom:25px;
+.consult .section-head h2{
+  color:#fff;
 }
 
-.contact-list{
+.consult .section-head p{
+  color:#c8d1e0;
+}
+
+.contact-highlight{
+  margin-top:25px;
   display:grid;
   gap:12px;
 }
 
-.contact-box{
+.contact-row{
   display:flex;
   align-items:center;
-  gap:14px;
-  padding:15px;
-  border:1px solid var(--line);
-  border-radius:16px;
-  background:rgba(255,255,255,.025);
-}
-
-.contact-box .icon{
-  width:46px;
-  height:46px;
-  border-radius:14px;
-  display:grid;
-  place-items:center;
-  background:rgba(255,255,255,.05);
-  color:var(--gold2);
-  font-size:20px;
-}
-
-.contact-box .icon.wa-contact{
-  background:var(--green);
-  color:white;
-}
-
-.contact-box strong{
-  display:block;
+  gap:11px;
+  color:#d9dfeb;
   font-size:13px;
 }
 
-.contact-box span{
-  color:var(--muted);
-  font-size:11px;
+.contact-row a:hover{
+  color:var(--gold2);
 }
 
 .form-box{
-  border:1px solid var(--line);
+  background:#fff;
   border-radius:25px;
   padding:28px;
-  background:rgba(0,0,0,.15);
-  box-shadow:var(--shadow);
-}
-
-.form-box h3{
-  font-size:23px;
-  margin-bottom:20px;
+  box-shadow:0 25px 70px rgba(0,0,0,.25);
 }
 
 .form-grid{
@@ -889,29 +960,29 @@ nav a:hover{
 }
 
 .field label{
-  color:#dce4ed;
+  color:#28344d;
   font-size:12px;
-  font-weight:bold;
+  font-weight:800;
 }
 
 .field input,
 .field select,
 .field textarea{
   width:100%;
-  border:1px solid var(--line);
-  background:#09192d;
-  color:white;
-  padding:13px 14px;
+  border:1px solid #dfe4ec;
   border-radius:12px;
-  outline:none;
-  font:inherit;
+  padding:13px 14px;
+  font-family:inherit;
   font-size:13px;
+  outline:none;
+  background:#fbfcfe;
 }
 
 .field input:focus,
 .field select:focus,
 .field textarea:focus{
-  border-color:rgba(240,207,122,.55);
+  border-color:#c69a39;
+  box-shadow:0 0 0 3px rgba(216,173,76,.12);
 }
 
 .field textarea{
@@ -919,180 +990,240 @@ nav a:hover{
   resize:vertical;
 }
 
-.form-note{
-  color:var(--muted);
-  font-size:10px;
-  margin-top:10px;
+.form-submit{
+  width:100%;
+  margin-top:15px;
 }
 
-/* LEGAL */
+/* =========================
+   FAQ
+========================= */
 
-.transparency{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-}
-
-.transparency .card{
-  min-height:170px;
-}
-
-.warning{
-  margin-top:20px;
-  padding:17px;
-  border:1px dashed rgba(240,207,122,.30);
-  border-radius:15px;
-  color:#cbd4df;
-  font-size:12px;
-  background:rgba(214,173,85,.035);
-}
-
-/* FAQ */
-
-.faq{
+.faq-list{
   max-width:850px;
   margin:auto;
+  display:grid;
+  gap:10px;
 }
 
-details{
-  border:1px solid var(--line);
-  border-radius:16px;
-  margin-bottom:11px;
-  background:rgba(255,255,255,.025);
+.faq{
+  border:1px solid #e1e6ee;
+  border-radius:15px;
   overflow:hidden;
+  background:#fff;
 }
 
-summary{
+.faq button{
+  width:100%;
+  padding:19px 20px;
+  background:#fff;
+  border:0;
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  text-align:left;
+  font-weight:800;
+  color:var(--navy);
   cursor:pointer;
-  padding:18px 20px;
-  font-weight:bold;
   font-size:14px;
-  list-style:none;
 }
 
-summary::-webkit-details-marker{
+.faq-content{
   display:none;
-}
-
-details p{
-  padding:0 20px 20px;
+  padding:0 20px 18px;
   color:var(--muted);
   font-size:13px;
 }
 
-/* CTA */
+.faq.open .faq-content{
+  display:block;
+}
+
+/* =========================
+   CTA
+========================= */
 
 .cta{
-  padding-top:30px;
+  padding:70px 0;
+  background:linear-gradient(135deg,#f8efd4,#fff);
 }
 
 .cta-box{
-  border:1px solid rgba(240,207,122,.25);
-  border-radius:28px;
-  padding:55px;
-  text-align:center;
-  background:
-    radial-gradient(circle at center,rgba(214,173,85,.12),transparent 50%),
-    rgba(255,255,255,.025);
+  background:var(--navy);
+  border-radius:30px;
+  padding:45px;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:30px;
+  overflow:hidden;
+  position:relative;
+}
+
+.cta-box::after{
+  content:"✦";
+  position:absolute;
+  font-size:190px;
+  color:rgba(216,173,76,.07);
+  right:20px;
+  top:-55px;
 }
 
 .cta-box h2{
-  font-size:clamp(30px,5vw,52px);
-  line-height:1.1;
-  margin-bottom:14px;
+  font-size:32px;
+  line-height:1.15;
+  margin-bottom:10px;
 }
 
 .cta-box p{
-  color:var(--muted);
-  max-width:650px;
-  margin:0 auto 25px;
+  color:#cbd3e1;
+  font-size:13px;
+  max-width:620px;
 }
 
-/* FOOTER */
+.cta-actions{
+  position:relative;
+  z-index:2;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+/* =========================
+   FOOTER
+========================= */
 
 footer{
-  padding:45px 0 30px;
-  border-top:1px solid var(--line);
+  background:#040c1c;
+  color:#fff;
+  padding:55px 0 25px;
 }
 
 .footer-grid{
   display:grid;
   grid-template-columns:1.2fr .8fr .8fr;
-  gap:30px;
+  gap:45px;
+  padding-bottom:35px;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.footer-brand p{
+  color:#9da9bd;
+  font-size:13px;
+  max-width:430px;
+  margin-top:15px;
 }
 
 .footer-title{
   color:var(--gold2);
-  font-weight:bold;
-  margin-bottom:10px;
+  font-size:13px;
+  font-weight:800;
+  margin-bottom:15px;
 }
 
-footer p,
-footer li,
-footer a{
-  color:var(--muted);
+.footer-links{
+  display:grid;
+  gap:9px;
+}
+
+.footer-links a{
+  color:#aab4c7;
   font-size:12px;
 }
 
-footer ul{
-  list-style:none;
-}
-
-footer li{
-  margin-bottom:7px;
+.footer-links a:hover{
+  color:#fff;
 }
 
 .footer-bottom{
-  border-top:1px solid var(--line);
-  margin-top:30px;
   padding-top:20px;
   display:flex;
   justify-content:space-between;
   gap:15px;
-  color:#788697;
-  font-size:10px;
+  color:#738096;
+  font-size:11px;
 }
 
-/* REVEAL */
+/* =========================
+   FLOATING WHATSAPP
+========================= */
+
+.wa-float{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  z-index:1000;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  background:var(--green);
+  display:grid;
+  place-items:center;
+  color:#fff;
+  box-shadow:0 12px 35px rgba(37,211,102,.38);
+  transition:.25s;
+}
+
+.wa-float:hover{
+  transform:translateY(-5px) scale(1.04);
+  background:#1ebe5b;
+}
+
+.wa-pulse{
+  position:absolute;
+  inset:-5px;
+  border:2px solid rgba(37,211,102,.4);
+  border-radius:50%;
+  animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+  0%{transform:scale(.9);opacity:.8}
+  70%{transform:scale(1.25);opacity:0}
+  100%{opacity:0}
+}
+
+/* =========================
+   REVEAL
+========================= */
 
 .reveal{
   opacity:0;
-  transform:translateY(22px);
-  transition:.7s ease;
+  transform:translateY(25px);
+  transition:.75s ease;
 }
 
 .reveal.show{
   opacity:1;
-  transform:none;
+  transform:translateY(0);
 }
 
-/* MOBILE */
+/* =========================
+   RESPONSIVE
+========================= */
 
-@media(max-width:950px){
-  nav{
+@media(max-width:980px){
+
+  .nav-links{
     position:absolute;
-    top:76px;
-    left:4%;
-    right:4%;
+    top:78px;
+    left:0;
+    width:100%;
+    background:#07152f;
+    border-top:1px solid rgba(255,255,255,.08);
+    padding:18px 5%;
     display:none;
     flex-direction:column;
     align-items:stretch;
-    padding:15px;
-    border:1px solid var(--line);
-    border-radius:18px;
-    background:#08182b;
   }
 
-  nav.open{
+  .nav-links.active{
     display:flex;
   }
 
-  nav a{
-    padding:10px;
-  }
-
-  .nav-wa{
-    justify-content:center;
+  .nav-links a{
+    padding:11px 0;
   }
 
   .menu-btn{
@@ -1100,95 +1231,91 @@ footer li{
   }
 
   .hero-grid,
+  .why-grid,
   .about-grid,
   .consult-grid{
     grid-template-columns:1fr;
+  }
+
+  .hero-card{
+    max-width:650px;
+    width:100%;
+    margin:auto;
   }
 
   .cards{
     grid-template-columns:1fr 1fr;
   }
 
-  .gallery{
-    grid-template-columns:repeat(3,1fr);
-  }
-
-  .process{
+  .facility-grid,
+  .process-grid{
     grid-template-columns:1fr 1fr;
   }
 
-  .transparency{
-    grid-template-columns:1fr;
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
   }
 }
 
-@media(max-width:650px){
-  section{
-    padding:70px 0;
+@media(max-width:680px){
+
+  .nav{
+    height:70px;
   }
 
-  .brand-text strong{
-    font-size:13px;
+  .nav-links{
+    top:70px;
   }
 
-  .brand-text span{
-    font-size:8px;
+  .logo-text{
+    font-size:12px;
   }
 
   .hero{
-    padding-top:125px;
+    padding-top:110px;
   }
 
   .hero h1{
-    font-size:45px;
+    letter-spacing:-1px;
   }
 
   .hero p{
     font-size:15px;
   }
 
-  .hero-card{
-    min-height:410px;
+  .hero-buttons{
+    flex-direction:column;
   }
 
-  .hero-emblem{
-    top:100px;
-  }
-
-  .hero-mini{
-    grid-template-columns:1fr;
-    gap:7px;
-  }
-
-  .hero-mini div{
-    padding:8px;
+  .hero-buttons .btn{
+    width:100%;
   }
 
   .trust-grid{
     grid-template-columns:1fr 1fr;
   }
 
-  .trust-item{
-    border-bottom:1px solid var(--line);
+  .trust-item:nth-child(2){
+    border-right:0;
+  }
+
+  .trust-item:nth-child(-n+2){
+    border-bottom:1px solid #edf0f5;
+  }
+
+  section{
+    padding:70px 0;
   }
 
   .cards,
-  .why-grid,
-  .process,
-  .footer-grid{
+  .facility-grid,
+  .process-grid,
+  .gallery-grid{
     grid-template-columns:1fr;
   }
 
-  .gallery{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .gallery-box{
-    min-height:180px;
-  }
-
-  .gallery-box:nth-child(even){
-    transform:none;
+  .about-box{
+    grid-template-columns:1fr;
   }
 
   .form-grid{
@@ -1199,19 +1326,38 @@ footer li{
     grid-column:auto;
   }
 
+  .legal-box{
+    grid-template-columns:1fr;
+  }
+
+  .status{
+    width:max-content;
+  }
+
   .cta-box{
-    padding:35px 20px;
+    padding:30px 24px;
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .cta-box h2{
+    font-size:27px;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr;
+    gap:30px;
   }
 
   .footer-bottom{
     flex-direction:column;
   }
 
-  .wa-floating{
-    right:16px;
-    bottom:16px;
-    width:57px;
-    height:57px;
+  .wa-float{
+    width:56px;
+    height:56px;
+    right:15px;
+    bottom:15px;
   }
 }
 </style>
@@ -1219,46 +1365,60 @@ footer li{
 
 <body>
 
+<!-- SVG SYMBOL WHATSAPP -->
+<svg width="0" height="0" style="position:absolute">
+  <symbol id="whatsapp-icon" viewBox="0 0 32 32">
+    <path fill="currentColor"
+      d="M16.02 3C8.84 3 3 8.78 3 15.9c0 2.28.61 4.5 1.77 6.45L3 29l6.82-1.74a13.1 13.1 0 0 0 6.2 1.56h.01C23.2 28.82 29 23.04 29 15.92 29 8.8 23.2 3 16.02 3Zm0 23.52h-.01c-1.95 0-3.86-.52-5.52-1.51l-.4-.24-4.05 1.03 1.08-3.94-.26-.41a10.9 10.9 0 0 1-1.68-5.55c0-6.02 4.92-10.92 10.96-10.92 2.92 0 5.67 1.13 7.73 3.18a10.84 10.84 0 0 1 3.2 7.75c0 6.02-4.91 10.91-11.05 10.91Zm5.98-8.19c-.33-.17-1.96-.97-2.26-1.08-.3-.11-.52-.17-.74.17-.22.33-.85 1.08-1.04 1.3-.19.22-.38.25-.71.08-.33-.17-1.4-.52-2.66-1.65-.98-.87-1.64-1.95-1.83-2.28-.19-.33-.02-.51.14-.67.15-.15.33-.38.49-.57.16-.19.22-.33.33-.55.11-.22.05-.41-.03-.57-.08-.17-.74-1.78-1.02-2.44-.27-.64-.54-.55-.74-.56h-.63c-.22 0-.57.08-.87.41-.3.33-1.14 1.11-1.14 2.7s1.17 3.13 1.33 3.35c.16.22 2.3 3.5 5.57 4.91.78.34 1.39.55 1.86.7.78.25 1.49.21 2.05.13.63-.09 1.96-.8 2.24-1.57.27-.77.27-1.43.19-1.57-.08-.14-.3-.22-.63-.38Z"/>
+  </symbol>
+</svg>
+
 <header>
   <div class="container nav">
 
-    <a href="#beranda" class="brand">
-      <div class="brand-logo">☾</div>
-      <div class="brand-text">
-        <strong>AL UBAIDILLAH</strong>
-        <span>TRAVEL</span>
+    <a href="#beranda" class="logo">
+      <div class="logo-mark">☪</div>
+      <div class="logo-text">
+        AL UBAIDILLAH TRAVEL
+        <span>UMROH • HAJI • WISATA HALAL</span>
       </div>
     </a>
 
-    <button class="menu-btn" id="menuBtn">☰</button>
-
-    <nav id="mainNav">
+    <nav class="nav-links" id="navLinks">
       <a href="#beranda">Beranda</a>
       <a href="#program">Program</a>
       <a href="#tentang">Tentang</a>
       <a href="#fasilitas">Fasilitas</a>
       <a href="#galeri">Galeri</a>
       <a href="#faq">FAQ</a>
-      <a href="#konsultasi" class="nav-wa">
-        <span class="wa-icon"></span>
+      <a href="#konsultasi">Konsultasi</a>
+
+      <a
+        class="nav-wa wa-btn"
+        href="https://wa.me/6283870874140"
+        target="_blank"
+        rel="noopener">
+        <svg class="wa-icon">
+          <use href="#whatsapp-icon"></use>
+        </svg>
         WhatsApp
       </a>
     </nav>
 
+    <button class="menu-btn" id="menuBtn">☰</button>
+
   </div>
 </header>
 
-<main>
-
 <!-- HERO -->
-
 <section class="hero" id="beranda">
   <div class="container hero-grid">
 
     <div class="reveal">
 
       <div class="badge">
-        ✦ UMROH • HAJI • WISATA HALAL
+        <span class="badge-dot"></span>
+        UMROH • HAJI • WISATA HALAL
       </div>
 
       <h1>
@@ -1267,9 +1427,9 @@ footer li{
       </h1>
 
       <p>
-        AL UBAIDILLAH TRAVEL hadir untuk membantu Anda mempersiapkan
-        perjalanan ibadah dan wisata halal dengan informasi yang jelas,
-        komunikasi yang mudah, serta pelayanan yang mengutamakan kenyamanan.
+        AL UBAIDILLAH TRAVEL hadir untuk membantu mempersiapkan
+        perjalanan ibadah dan wisata halal dengan pelayanan yang
+        amanah, nyaman dan profesional.
       </p>
 
       <div class="hero-buttons">
@@ -1278,12 +1438,17 @@ footer li{
           Konsultasi Sekarang
         </a>
 
-        <a href="https://wa.me/6283870874140?text=Assalamu%27alaikum%20AL%20UBAIDILLAH%20TRAVEL%2C%20saya%20ingin%20konsultasi."
-           target="_blank"
-           class="btn btn-wa">
+        <a
+          href="https://wa.me/6283870874140?text=Assalamu%27alaikum%20AL%20UBAIDILLAH%20TRAVEL%2C%20saya%20ingin%20konsultasi%20perjalanan."
+          target="_blank"
+          rel="noopener"
+          class="btn btn-wa wa-btn">
 
-          <span class="wa-icon"></span>
-          WhatsApp
+          <svg class="wa-icon">
+            <use href="#whatsapp-icon"></use>
+          </svg>
+
+          Chat WhatsApp
         </a>
 
       </div>
@@ -1292,26 +1457,22 @@ footer li{
 
     <div class="hero-card reveal">
 
-      <div class="hero-emblem">
-        <div class="crescent">☾</div>
+      <div class="kaaba-art">
+        <div class="kaaba"></div>
       </div>
 
-      <div class="hero-mini">
+      <div class="hero-card-content">
 
-        <div>
-          <strong>01</strong>
-          <span>UMROH</span>
-        </div>
+        <h3>Langkah Ibadah yang Berarti</h3>
 
-        <div>
-          <strong>02</strong>
-          <span>HAJI</span>
-        </div>
+        <p>
+          Rencanakan perjalanan Anda bersama
+          AL UBAIDILLAH TRAVEL.
+        </p>
 
-        <div>
-          <strong>03</strong>
-          <span>WISATA HALAL</span>
-        </div>
+        <a href="#program" class="btn btn-outline">
+          Lihat Program
+        </a>
 
       </div>
 
@@ -1321,262 +1482,267 @@ footer li{
 </section>
 
 <!-- TRUST -->
-
 <div class="trust">
   <div class="container trust-grid">
 
     <div class="trust-item">
       <strong>Umroh</strong>
-      <span>Program Ibadah</span>
+      <span>Program perjalanan ibadah</span>
     </div>
 
     <div class="trust-item">
       <strong>Haji</strong>
-      <span>Perjalanan Ibadah</span>
+      <span>Informasi & konsultasi</span>
     </div>
 
     <div class="trust-item">
       <strong>Halal</strong>
-      <span>Wisata Pilihan</span>
+      <span>Wisata ramah Muslim</span>
     </div>
 
     <div class="trust-item">
-      <strong>24/7</strong>
-      <span>Konsultasi Online</span>
+      <strong>WA</strong>
+      <span>Respons konsultasi</span>
     </div>
 
   </div>
 </div>
 
 <!-- PROGRAM -->
-
-<section id="program">
+<section class="program" id="program">
 
   <div class="container">
 
     <div class="section-head reveal">
       <div class="eyebrow">Program Perjalanan</div>
-      <h2>Pilih perjalanan yang Anda inginkan.</h2>
+
+      <h2>
+        Pilih Perjalanan Anda
+      </h2>
+
       <p>
-        Informasi program dapat dikonsultasikan langsung dengan tim
-        AL UBAIDILLAH TRAVEL.
+        Konsultasikan kebutuhan perjalanan Anda
+        dan dapatkan informasi program yang sesuai.
       </p>
     </div>
 
-    <div class="program-switch reveal">
+    <div class="tabs">
 
-      <button class="switch-btn active" data-target="umroh">
+      <button class="tab active" data-tab="umroh">
         Umroh
       </button>
 
-      <button class="switch-btn" data-target="haji">
+      <button class="tab" data-tab="haji">
         Haji
       </button>
 
-      <button class="switch-btn" data-target="halal">
+      <button class="tab" data-tab="wisata">
         Wisata Halal
       </button>
 
     </div>
 
-    <div class="program-panel active" id="umroh">
+    <!-- UMROH -->
+    <div class="tab-panel active" id="umroh">
 
       <div class="cards">
 
         <div class="card reveal">
-          <div class="card-icon">☾</div>
-          <h3>Umroh Reguler</h3>
-          <p>
-            Pilihan perjalanan Umroh yang dapat disesuaikan dengan
-            kebutuhan dan rencana jamaah.
-          </p>
 
-          <ul class="card-list">
-            <li>Konsultasi program</li>
-            <li>Persiapan keberangkatan</li>
-            <li>Informasi perjalanan</li>
-            <li>Pendampingan sesuai program</li>
-          </ul>
-
-          <a href="#konsultasi" class="btn btn-outline">
-            Konsultasikan
-          </a>
-        </div>
-
-        <div class="card reveal">
-          <div class="card-icon">✦</div>
-          <h3>Umroh Ramadhan</h3>
-          <p>
-            Program khusus bagi jamaah yang ingin merencanakan
-            perjalanan ibadah pada bulan Ramadhan.
-          </p>
-
-          <ul class="card-list">
-            <li>Konsultasi waktu perjalanan</li>
-            <li>Persiapan dokumen</li>
-            <li>Informasi program</li>
-            <li>Konsultasi keluarga</li>
-          </ul>
-
-          <a href="#konsultasi" class="btn btn-outline">
-            Konsultasikan
-          </a>
-        </div>
-
-        <div class="card reveal">
-          <div class="card-icon">◆</div>
-          <h3>Umroh Keluarga</h3>
-          <p>
-            Konsultasi perjalanan untuk keluarga atau rombongan
-            yang ingin mempersiapkan Umroh bersama.
-          </p>
-
-          <ul class="card-list">
-            <li>Perencanaan rombongan</li>
-            <li>Konsultasi kebutuhan</li>
-            <li>Informasi perjalanan</li>
-            <li>Komunikasi WhatsApp</li>
-          </ul>
-
-          <a href="#konsultasi" class="btn btn-outline">
-            Konsultasikan
-          </a>
-        </div>
-
-      </div>
-
-    </div>
-
-    <div class="program-panel" id="haji">
-
-      <div class="cards">
-
-        <div class="card reveal">
           <div class="card-icon">☪</div>
-          <h3>Program Haji</h3>
+
+          <h3>Umroh Reguler</h3>
+
           <p>
-            Konsultasi informasi perjalanan Haji sesuai program
-            dan ketentuan yang berlaku.
+            Program perjalanan Umroh untuk
+            keluarga maupun jamaah umum.
           </p>
 
-          <ul class="card-list">
-            <li>Konsultasi awal</li>
+          <ul>
             <li>Informasi program</li>
-            <li>Persiapan perjalanan</li>
-            <li>Informasi dokumen</li>
+            <li>Pendampingan persiapan</li>
+            <li>Konsultasi kebutuhan jamaah</li>
+            <li>Rencana perjalanan sesuai program</li>
           </ul>
 
-          <a href="#konsultasi" class="btn btn-outline">
-            Konsultasikan
-          </a>
         </div>
 
         <div class="card reveal">
-          <div class="card-icon">✧</div>
-          <h3>Konsultasi Jamaah</h3>
+
+          <div class="card-icon">☾</div>
+
+          <h3>Umroh Ramadhan</h3>
+
           <p>
-            Sampaikan kebutuhan Anda terlebih dahulu agar dapat
-            memperoleh informasi yang sesuai.
+            Pilihan perjalanan ibadah pada
+            momentum bulan Ramadhan.
           </p>
 
-          <ul class="card-list">
-            <li>Rencana perjalanan</li>
-            <li>Jumlah jamaah</li>
-            <li>Perkiraan waktu</li>
-            <li>Kebutuhan khusus</li>
+          <ul>
+            <li>Informasi keberangkatan</li>
+            <li>Konsultasi persiapan</li>
+            <li>Informasi fasilitas</li>
+            <li>Pendampingan administrasi</li>
           </ul>
 
-          <a href="#konsultasi" class="btn btn-outline">
-            Mulai Konsultasi
-          </a>
         </div>
 
         <div class="card reveal">
-          <div class="card-icon">◆</div>
-          <h3>Rombongan</h3>
+
+          <div class="card-icon">✦</div>
+
+          <h3>Umroh Keluarga</h3>
+
           <p>
-            Konsultasi bagi keluarga atau kelompok yang ingin
-            merencanakan perjalanan bersama.
+            Konsultasi perjalanan Umroh
+            bersama keluarga.
           </p>
 
-          <ul class="card-list">
-            <li>Perencanaan rombongan</li>
-            <li>Informasi program</li>
-            <li>Konsultasi kebutuhan</li>
-            <li>Kontak langsung</li>
+          <ul>
+            <li>Konsultasi jumlah jamaah</li>
+            <li>Perencanaan perjalanan</li>
+            <li>Informasi fasilitas</li>
+            <li>Komunikasi langsung WhatsApp</li>
           </ul>
 
-          <a href="#konsultasi" class="btn btn-outline">
-            Konsultasikan
-          </a>
         </div>
 
       </div>
 
     </div>
 
-    <div class="program-panel" id="halal">
+    <!-- HAJI -->
+    <div class="tab-panel" id="haji">
 
       <div class="cards">
 
-        <div class="card reveal">
-          <div class="card-icon">✦</div>
-          <h3>Wisata Halal</h3>
+        <div class="card">
+
+          <div class="card-icon">🕋</div>
+
+          <h3>Konsultasi Haji</h3>
+
           <p>
-            Rencanakan perjalanan wisata halal dengan pilihan
-            destinasi yang dapat dikonsultasikan.
+            Dapatkan informasi awal mengenai
+            kebutuhan perjalanan Haji.
           </p>
 
-          <ul class="card-list">
-            <li>Konsultasi destinasi</li>
-            <li>Rencana perjalanan</li>
-            <li>Informasi kebutuhan</li>
-            <li>Komunikasi langsung</li>
+          <ul>
+            <li>Konsultasi kebutuhan</li>
+            <li>Informasi persiapan</li>
+            <li>Informasi dokumen</li>
+            <li>Pendampingan komunikasi</li>
           </ul>
 
-          <a href="#konsultasi" class="btn btn-outline">
-            Konsultasikan
-          </a>
         </div>
 
-        <div class="card reveal">
-          <div class="card-icon">✈</div>
-          <h3>Rombongan Wisata</h3>
+        <div class="card">
+
+          <div class="card-icon">☪</div>
+
+          <h3>Persiapan Jamaah</h3>
+
           <p>
-            Cocok untuk keluarga, komunitas maupun kelompok yang
-            ingin merencanakan perjalanan bersama.
+            Membantu calon jamaah memahami
+            tahapan persiapan perjalanan.
           </p>
 
-          <ul class="card-list">
-            <li>Perencanaan grup</li>
-            <li>Tujuan wisata</li>
-            <li>Perkiraan waktu</li>
+          <ul>
+            <li>Persiapan perjalanan</li>
+            <li>Checklist kebutuhan</li>
+            <li>Konsultasi keluarga</li>
+            <li>Informasi program</li>
+          </ul>
+
+        </div>
+
+        <div class="card">
+
+          <div class="card-icon">✦</div>
+
+          <h3>Informasi Program</h3>
+
+          <p>
+            Hubungi tim kami untuk mendapatkan
+            informasi program yang tersedia.
+          </p>
+
+          <ul>
+            <li>Program perjalanan</li>
+            <li>Informasi jadwal</li>
+            <li>Informasi fasilitas</li>
+            <li>Konsultasi langsung</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- WISATA -->
+    <div class="tab-panel" id="wisata">
+
+      <div class="cards">
+
+        <div class="card">
+
+          <div class="card-icon">🌙</div>
+
+          <h3>Wisata Halal</h3>
+
+          <p>
+            Perjalanan wisata yang memperhatikan
+            kebutuhan wisatawan Muslim.
+          </p>
+
+          <ul>
+            <li>Destinasi ramah Muslim</li>
+            <li>Informasi makanan halal</li>
+            <li>Rencana perjalanan</li>
             <li>Konsultasi kebutuhan</li>
           </ul>
 
-          <a href="#konsultasi" class="btn btn-outline">
-            Konsultasikan
-          </a>
         </div>
 
-        <div class="card reveal">
-          <div class="card-icon">🌙</div>
+        <div class="card">
+
+          <div class="card-icon">✈</div>
+
           <h3>Custom Trip</h3>
+
           <p>
-            Sampaikan rencana perjalanan Anda untuk mendapatkan
-            informasi dan opsi yang tersedia.
+            Rancang perjalanan sesuai kebutuhan
+            keluarga atau kelompok.
           </p>
 
-          <ul class="card-list">
-            <li>Tujuan pilihan</li>
+          <ul>
+            <li>Tujuan perjalanan</li>
             <li>Jumlah peserta</li>
-            <li>Perkiraan waktu</li>
-            <li>Kebutuhan perjalanan</li>
+            <li>Durasi perjalanan</li>
+            <li>Konsultasi itinerary</li>
           </ul>
 
-          <a href="#konsultasi" class="btn btn-outline">
-            Mulai Konsultasi
-          </a>
+        </div>
+
+        <div class="card">
+
+          <div class="card-icon">✦</div>
+
+          <h3>Family Journey</h3>
+
+          <p>
+            Pilihan perjalanan bersama keluarga
+            dengan perencanaan lebih fleksibel.
+          </p>
+
+          <ul>
+            <li>Perencanaan keluarga</li>
+            <li>Destinasi pilihan</li>
+            <li>Informasi fasilitas</li>
+            <li>Konsultasi WhatsApp</li>
+          </ul>
+
         </div>
 
       </div>
@@ -1588,64 +1754,108 @@ footer li{
 </section>
 
 <!-- WHY -->
+<section>
 
-<section class="why">
+  <div class="container why-grid">
 
-  <div class="container">
+    <div class="why-visual reveal">
 
-    <div class="section-head reveal">
-      <div class="eyebrow">Kenapa Kami</div>
-      <h2>Informasi jelas sebelum berangkat.</h2>
-      <p>
-        Kami membangun komunikasi yang mudah agar calon jamaah
-        dapat bertanya dan memahami kebutuhan perjalanan terlebih dahulu.
-      </p>
+      <div class="visual-center">
+
+        <div class="symbol">☪</div>
+
+        <h3>Amanah & Nyaman</h3>
+
+        <p>
+          Melayani dengan hati
+        </p>
+
+      </div>
+
     </div>
 
-    <div class="why-grid">
+    <div>
 
-      <div class="why-item reveal">
-        <div class="why-number">01</div>
-        <div>
-          <h3>Konsultasi Mudah</h3>
-          <p>
-            Hubungi kami melalui WhatsApp untuk menyampaikan
-            kebutuhan perjalanan Anda.
-          </p>
+      <div class="section-head reveal">
+
+        <div class="eyebrow">
+          Mengapa Kami
         </div>
+
+        <h2>
+          Perjalanan yang Dipersiapkan dengan Baik
+        </h2>
+
+        <p>
+          Setiap perjalanan memiliki kebutuhan
+          yang berbeda. Karena itu komunikasi
+          dan persiapan menjadi bagian penting.
+        </p>
+
       </div>
 
-      <div class="why-item reveal">
-        <div class="why-number">02</div>
-        <div>
-          <h3>Informasi Transparan</h3>
-          <p>
-            Detail program dapat dikonfirmasi sebelum Anda
-            mengambil keputusan.
-          </p>
-        </div>
-      </div>
+      <div class="why-list">
 
-      <div class="why-item reveal">
-        <div class="why-number">03</div>
-        <div>
-          <h3>Perencanaan Terarah</h3>
-          <p>
-            Rencana perjalanan dibicarakan berdasarkan kebutuhan
-            jamaah dan program yang tersedia.
-          </p>
-        </div>
-      </div>
+        <div class="why-item reveal">
 
-      <div class="why-item reveal">
-        <div class="why-number">04</div>
-        <div>
-          <h3>Komunikasi Langsung</h3>
-          <p>
-            Tidak perlu bingung mencari kontak. WhatsApp tersedia
-            langsung di website.
-          </p>
+          <div class="why-number">01</div>
+
+          <div>
+            <h3>Konsultasi Langsung</h3>
+
+            <p>
+              Komunikasikan kebutuhan perjalanan
+              Anda langsung melalui WhatsApp.
+            </p>
+          </div>
+
         </div>
+
+        <div class="why-item reveal">
+
+          <div class="why-number">02</div>
+
+          <div>
+            <h3>Informasi Transparan</h3>
+
+            <p>
+              Detail program dapat dikonsultasikan
+              sebelum menentukan pilihan.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="why-item reveal">
+
+          <div class="why-number">03</div>
+
+          <div>
+            <h3>Pendampingan Persiapan</h3>
+
+            <p>
+              Membantu calon jamaah memahami
+              kebutuhan sebelum perjalanan.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="why-item reveal">
+
+          <div class="why-number">04</div>
+
+          <div>
+            <h3>Pelayanan Personal</h3>
+
+            <p>
+              Setiap kebutuhan dapat dibicarakan
+              sesuai kondisi jamaah.
+            </p>
+          </div>
+
+        </div>
+
       </div>
 
     </div>
@@ -1654,65 +1864,63 @@ footer li{
 
 </section>
 
-<!-- TENTANG -->
-
-<section id="tentang">
+<!-- ABOUT -->
+<section class="about" id="tentang">
 
   <div class="container about-grid">
 
-    <div class="about-visual reveal">
+    <div>
 
-      <div class="about-seal">
-        <div>
-          <strong>AL UBAIDILLAH</strong>
-          <span>TRAVEL</span>
-          <br>
-          <span>UMROH • HAJI • HALAL</span>
+      <div class="section-head reveal">
+
+        <div class="eyebrow">
+          Tentang Kami
         </div>
+
+        <h2>
+          AL UBAIDILLAH TRAVEL
+        </h2>
+
+        <p>
+          Kami hadir sebagai sarana informasi dan
+          konsultasi perjalanan Umroh, Haji dan
+          Wisata Halal.
+        </p>
+
+        <p>
+          Fokus kami adalah membantu calon jamaah
+          mendapatkan informasi yang jelas serta
+          mempersiapkan perjalanan dengan lebih baik.
+        </p>
+
       </div>
+
+      <a href="#konsultasi" class="btn btn-gold">
+        Konsultasi Program
+      </a>
 
     </div>
 
-    <div class="about-content reveal">
+    <div class="about-box">
 
-      <div class="section-head" style="text-align:left;margin:0 0 25px;">
-        <div class="eyebrow">Tentang Kami</div>
-        <h2>Melangkah dengan niat yang baik.</h2>
+      <div class="about-mini reveal">
+        <strong>UMROH</strong>
+        <span>Program perjalanan ibadah ke Tanah Suci.</span>
       </div>
 
-      <p>
-        AL UBAIDILLAH TRAVEL merupakan konsep layanan perjalanan
-        yang berfokus pada Umroh, Haji dan Wisata Halal.
-      </p>
+      <div class="about-mini reveal">
+        <strong>HAJI</strong>
+        <span>Informasi dan konsultasi persiapan perjalanan.</span>
+      </div>
 
-      <p>
-        Website ini menjadi sarana informasi dan komunikasi agar
-        calon jamaah dapat menyampaikan kebutuhan perjalanan
-        secara langsung.
-      </p>
+      <div class="about-mini reveal">
+        <strong>WISATA HALAL</strong>
+        <span>Perjalanan ramah Muslim dan keluarga.</span>
+      </div>
 
-      <div class="points">
-
-        <div class="point">
-          <span>✓</span>
-          Konsultasi perjalanan melalui WhatsApp
-        </div>
-
-        <div class="point">
-          <span>✓</span>
-          Informasi program yang dapat dikonfirmasi
-        </div>
-
-        <div class="point">
-          <span>✓</span>
-          Komunikasi yang mudah dan responsif
-        </div>
-
-        <div class="point">
-          <span>✓</span>
-          Mengutamakan kenyamanan calon jamaah
-        </div>
-
+      <div class="about-mini reveal">
+        <strong>KONSULTASI</strong>
+        <span>Hubungi kami melalui WhatsApp.</span>
       </div>
 
     </div>
@@ -1721,57 +1929,52 @@ footer li{
 
 </section>
 
-<!-- FASILITAS -->
-
+<!-- FACILITIES -->
 <section id="fasilitas">
 
   <div class="container">
 
     <div class="section-head reveal">
-      <div class="eyebrow">Fasilitas & Pendampingan</div>
-      <h2>Persiapkan perjalanan dengan lebih tenang.</h2>
+
+      <div class="eyebrow">
+        Layanan
+      </div>
+
+      <h2>
+        Fasilitas & Pendampingan
+      </h2>
+
       <p>
-        Fasilitas dan layanan mengikuti program yang dipilih
-        dan perlu dikonfirmasi saat konsultasi.
+        Detail fasilitas mengikuti program yang
+        dipilih dan dapat dikonfirmasi sebelum pemesanan.
       </p>
+
     </div>
 
-    <div class="cards">
+    <div class="facility-grid">
 
-      <div class="card reveal">
-        <div class="card-icon">☎</div>
-        <h3>Konsultasi</h3>
-        <p>
-          Diskusikan rencana perjalanan Anda melalui kontak
-          yang tersedia.
-        </p>
+      <div class="facility reveal">
+        <div class="facility-icon">🧳</div>
+        <h3>Persiapan Perjalanan</h3>
+        <p>Informasi kebutuhan sebelum berangkat.</p>
       </div>
 
-      <div class="card reveal">
-        <div class="card-icon">▣</div>
-        <h3>Persiapan</h3>
-        <p>
-          Informasi mengenai persiapan perjalanan dapat
-          dibicarakan sebelum keberangkatan.
-        </p>
+      <div class="facility reveal">
+        <div class="facility-icon">📋</div>
+        <h3>Informasi Administrasi</h3>
+        <p>Konsultasi dokumen dan kebutuhan perjalanan.</p>
       </div>
 
-      <div class="card reveal">
-        <div class="card-icon">✈</div>
-        <h3>Perjalanan</h3>
-        <p>
-          Detail perjalanan disesuaikan dengan program yang
-          telah dikonfirmasi.
-        </p>
+      <div class="facility reveal">
+        <div class="facility-icon">🕌</div>
+        <h3>Informasi Ibadah</h3>
+        <p>Persiapan umum perjalanan ibadah.</p>
       </div>
 
-      <div class="card reveal">
-        <div class="card-icon">☪</div>
-        <h3>Pendampingan</h3>
-        <p>
-          Bentuk pendampingan mengikuti program dan layanan
-          yang disepakati.
-        </p>
+      <div class="facility reveal">
+        <div class="facility-icon">💬</div>
+        <h3>Konsultasi WhatsApp</h3>
+        <p>Komunikasi langsung dengan tim.</p>
       </div>
 
     </div>
@@ -1781,48 +1984,51 @@ footer li{
 </section>
 
 <!-- PROCESS -->
-
-<section>
+<section class="process">
 
   <div class="container">
 
     <div class="section-head reveal">
-      <div class="eyebrow">Alur Konsultasi</div>
-      <h2>Empat langkah sederhana.</h2>
+
+      <div class="eyebrow">
+        Cara Memulai
+      </div>
+
+      <h2>
+        Mudah untuk Konsultasi
+      </h2>
+
+      <p>
+        Mulai dari konsultasi hingga mendapatkan
+        informasi program yang sesuai.
+      </p>
+
     </div>
 
-    <div class="process">
+    <div class="process-grid">
 
-      <div class="process-item reveal">
+      <div class="process-card reveal">
         <div class="process-number">STEP 01</div>
         <h3>Hubungi Kami</h3>
-        <p>
-          Kirim pesan melalui WhatsApp.
-        </p>
+        <p>Kirim pesan melalui WhatsApp.</p>
       </div>
 
-      <div class="process-item reveal">
+      <div class="process-card reveal">
         <div class="process-number">STEP 02</div>
-        <h3>Sampaikan Kebutuhan</h3>
-        <p>
-          Jelaskan program, jumlah jamaah dan rencana Anda.
-        </p>
+        <h3>Pilih Program</h3>
+        <p>Sampaikan jenis perjalanan yang diinginkan.</p>
       </div>
 
-      <div class="process-item reveal">
+      <div class="process-card reveal">
         <div class="process-number">STEP 03</div>
-        <h3>Konfirmasi</h3>
-        <p>
-          Detail program dibicarakan dan dikonfirmasi.
-        </p>
+        <h3>Konsultasi</h3>
+        <p>Diskusikan kebutuhan dan rencana perjalanan.</p>
       </div>
 
-      <div class="process-item reveal">
+      <div class="process-card reveal">
         <div class="process-number">STEP 04</div>
         <h3>Persiapan</h3>
-        <p>
-          Lanjutkan persiapan sesuai program yang dipilih.
-        </p>
+        <p>Lanjutkan proses sesuai informasi program.</p>
       </div>
 
     </div>
@@ -1831,41 +2037,70 @@ footer li{
 
 </section>
 
-<!-- GALERI -->
-
+<!-- GALLERY -->
 <section id="galeri">
 
   <div class="container">
 
     <div class="section-head reveal">
-      <div class="eyebrow">Galeri</div>
-      <h2>Ruang untuk cerita perjalanan Anda.</h2>
+
+      <div class="eyebrow">
+        Galeri
+      </div>
+
+      <h2>
+        Perjalanan & Destinasi
+      </h2>
+
       <p>
-        Bagian ini siap diisi foto asli perjalanan,
-        keberangkatan dan kegiatan jamaah.
+        Area ini siap digunakan untuk foto asli
+        jamaah, Masjidil Haram, Madinah dan destinasi wisata.
       </p>
+
     </div>
 
-    <div class="gallery">
+    <div class="gallery-grid">
 
-      <div class="gallery-box reveal">
-        <div class="gallery-label">Makkah</div>
+      <div class="gallery-item reveal">
+        <div>
+          <h3>Masjidil Haram</h3>
+          <span>Galeri Umroh</span>
+        </div>
       </div>
 
-      <div class="gallery-box reveal">
-        <div class="gallery-label">Madinah</div>
+      <div class="gallery-item reveal">
+        <div>
+          <h3>Masjid Nabawi</h3>
+          <span>Galeri Madinah</span>
+        </div>
       </div>
 
-      <div class="gallery-box reveal">
-        <div class="gallery-label">Perjalanan Ibadah</div>
+      <div class="gallery-item reveal">
+        <div>
+          <h3>Wisata Halal</h3>
+          <span>Destinasi Pilihan</span>
+        </div>
       </div>
 
-      <div class="gallery-box reveal">
-        <div class="gallery-label">Keberangkatan</div>
+      <div class="gallery-item reveal">
+        <div>
+          <h3>Perjalanan Jamaah</h3>
+          <span>Dokumentasi</span>
+        </div>
       </div>
 
-      <div class="gallery-box reveal">
-        <div class="gallery-label">Pendampingan Jamaah</div>
+      <div class="gallery-item reveal">
+        <div>
+          <h3>Persiapan Jamaah</h3>
+          <span>Pelayanan</span>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal">
+        <div>
+          <h3>Perjalanan Berkesan</h3>
+          <span>AL UBAIDILLAH TRAVEL</span>
+        </div>
       </div>
 
     </div>
@@ -1874,111 +2109,89 @@ footer li{
 
 </section>
 
-<!-- TRANSPARENCY -->
-
+<!-- LEGAL -->
 <section>
 
   <div class="container">
 
-    <div class="section-head reveal">
-      <div class="eyebrow">Transparansi</div>
-      <h2>Pastikan informasi sebelum mengambil keputusan.</h2>
-      <p>
-        Kami menyarankan calon jamaah melakukan konfirmasi
-        terhadap seluruh detail program.
-      </p>
-    </div>
+    <div class="legal-box reveal">
 
-    <div class="transparency">
+      <div>
 
-      <div class="card reveal">
-        <div class="card-icon">01</div>
-        <h3>Program</h3>
+        <h3>
+          Informasi Legalitas & Program
+        </h3>
+
         <p>
-          Pastikan nama dan jenis program yang Anda pilih.
+          Detail legalitas, izin penyelenggaraan,
+          jadwal, maskapai, hotel dan harga program
+          akan ditampilkan setelah data resmi tersedia
+          dan diverifikasi.
         </p>
+
       </div>
 
-      <div class="card reveal">
-        <div class="card-icon">02</div>
-        <h3>Dokumen</h3>
-        <p>
-          Pastikan seluruh persyaratan dan dokumen dijelaskan
-          sebelum proses dilanjutkan.
-        </p>
+      <div class="status">
+        DATA RESMI DAPAT DIKONFIRMASI
       </div>
 
-      <div class="card reveal">
-        <div class="card-icon">03</div>
-        <h3>Biaya</h3>
-        <p>
-          Harga dan komponen biaya wajib dikonfirmasi sesuai
-          program yang tersedia.
-        </p>
-      </div>
-
-    </div>
-
-    <div class="warning reveal">
-      <strong style="color:var(--gold2);">Catatan penting:</strong>
-      Informasi harga, jadwal, maskapai, hotel, fasilitas,
-      legalitas dan detail program dapat berubah. Silakan
-      konfirmasi langsung sebelum melakukan pendaftaran atau pembayaran.
     </div>
 
   </div>
 
 </section>
 
-<!-- KONSULTASI -->
-
+<!-- CONSULTATION -->
 <section class="consult" id="konsultasi">
 
   <div class="container consult-grid">
 
-    <div class="consult-info reveal">
+    <div>
 
-      <div class="eyebrow" style="color:var(--gold2);letter-spacing:3px;font-size:12px;">
-        Konsultasi Jamaah
+      <div class="section-head reveal">
+
+        <div class="eyebrow">
+          Konsultasi
+        </div>
+
+        <h2>
+          Rencanakan Perjalanan Anda
+        </h2>
+
+        <p>
+          Isi formulir singkat berikut.
+          Setelah dikirim, data akan otomatis
+          disiapkan menjadi pesan WhatsApp.
+        </p>
+
       </div>
 
-      <h2>
-        Ceritakan rencana perjalanan Anda.
-      </h2>
+      <div class="contact-highlight">
 
-      <p>
-        Isi formulir di samping. Setelah dikirim, website akan
-        membuat pesan WhatsApp secara otomatis.
-      </p>
+        <div class="contact-row">
 
-      <div class="contact-list">
+          <svg class="wa-icon large">
+            <use href="#whatsapp-icon"></use>
+          </svg>
 
-        <a class="contact-box"
-           href="https://wa.me/6283870874140"
-           target="_blank">
+          <a href="https://wa.me/6283870874140"
+             target="_blank"
+             rel="noopener">
+            0838 7087 4140
+          </a>
 
-          <div class="icon wa-contact">
-            <span class="wa-icon wa-big"></span>
-          </div>
+        </div>
 
-          <div>
-            <strong>WhatsApp</strong>
-            <span>083870874140</span>
-          </div>
+        <div class="contact-row">
+          ✉
+          <a href="mailto:adnanfarisi007@gmail.com">
+            adnanfarisi007@gmail.com
+          </a>
+        </div>
 
-        </a>
-
-        <a class="contact-box"
-           href="mailto:adnanfarisi007@gmail.com">
-
-          <div class="icon">✉</div>
-
-          <div>
-            <strong>Email</strong>
-            <span>adnanfarisi007@gmail.com</span>
-          </div>
-
-        </a>
+        <div class="contact-row">
+          📍 Indonesia
+        </div>
 
       </div>
 
@@ -1986,81 +2199,102 @@ footer li{
 
     <div class="form-box reveal">
 
-      <h3>Form Konsultasi</h3>
-
       <form id="consultForm">
 
         <div class="form-grid">
 
           <div class="field">
-            <label for="nama">Nama</label>
+            <label>Nama</label>
             <input
-              id="nama"
               type="text"
+              id="nama"
               placeholder="Nama Anda"
               required>
           </div>
 
           <div class="field">
-            <label for="kota">Kota</label>
+            <label>Kota</label>
             <input
-              id="kota"
               type="text"
-              placeholder="Kota Anda"
+              id="kota"
+              placeholder="Contoh: Bandung"
               required>
           </div>
 
           <div class="field">
-            <label for="programSelect">Program</label>
+
+            <label>Program</label>
 
             <select id="programSelect" required>
-              <option value="">Pilih program</option>
-              <option>Umroh Reguler</option>
-              <option>Umroh Ramadhan</option>
-              <option>Umroh Keluarga</option>
-              <option>Haji</option>
-              <option>Wisata Halal</option>
-              <option>Custom Trip</option>
+
+              <option value="">
+                Pilih program
+              </option>
+
+              <option value="Umroh">
+                Umroh
+              </option>
+
+              <option value="Haji">
+                Haji
+              </option>
+
+              <option value="Wisata Halal">
+                Wisata Halal
+              </option>
+
             </select>
 
           </div>
 
           <div class="field">
-            <label for="jumlah">Jumlah Jamaah</label>
 
-            <select id="jumlah">
-              <option>1 orang</option>
-              <option>2 orang</option>
-              <option>3 orang</option>
-              <option>4 orang</option>
-              <option>5 orang</option>
-              <option>Lebih dari 5 orang</option>
-            </select>
+            <label>Jumlah Jamaah</label>
 
-          </div>
-
-          <div class="field">
-            <label for="waktu">Perkiraan Keberangkatan</label>
             <input
-              id="waktu"
-              type="text"
-              placeholder="Contoh: Tahun depan">
-          </div>
+              type="number"
+              id="jamaah"
+              min="1"
+              placeholder="Contoh: 2"
+              required>
 
-          <div class="field">
-            <label for="kontak">Kontak Tambahan</label>
-            <input
-              id="kontak"
-              type="text"
-              placeholder="Opsional">
           </div>
 
           <div class="field full">
-            <label for="pesan">Pesan</label>
+
+            <label>
+              Perkiraan Keberangkatan
+            </label>
+
+            <input
+              type="text"
+              id="keberangkatan"
+              placeholder="Contoh: Desember 2026">
+
+          </div>
+
+          <div class="field full">
+
+            <label>
+              Kontak Tambahan
+            </label>
+
+            <input
+              type="text"
+              id="kontak"
+              placeholder="Nomor telepon / informasi lain">
+
+          </div>
+
+          <div class="field full">
+
+            <label>
+              Pesan
+            </label>
 
             <textarea
               id="pesan"
-              placeholder="Tuliskan pertanyaan atau kebutuhan Anda..."></textarea>
+              placeholder="Tuliskan kebutuhan atau pertanyaan Anda..."></textarea>
 
           </div>
 
@@ -2068,18 +2302,15 @@ footer li{
 
         <button
           type="submit"
-          class="btn btn-wa"
-          style="width:100%;margin-top:18px;">
+          class="btn btn-wa form-submit wa-btn">
 
-          <span class="wa-icon"></span>
-          Kirim Konsultasi via WhatsApp
+          <svg class="wa-icon large">
+            <use href="#whatsapp-icon"></use>
+          </svg>
+
+          Kirim Konsultasi ke WhatsApp
 
         </button>
-
-        <div class="form-note">
-          Setelah tombol diklik, WhatsApp akan terbuka dengan
-          pesan konsultasi yang sudah disiapkan.
-        </div>
 
       </form>
 
@@ -2090,57 +2321,104 @@ footer li{
 </section>
 
 <!-- FAQ -->
-
 <section id="faq">
 
   <div class="container">
 
     <div class="section-head reveal">
-      <div class="eyebrow">FAQ</div>
-      <h2>Pertanyaan yang sering ditanyakan.</h2>
+
+      <div class="eyebrow">
+        FAQ
+      </div>
+
+      <h2>
+        Pertanyaan Umum
+      </h2>
+
+      <p>
+        Informasi awal sebelum Anda melakukan konsultasi.
+      </p>
+
     </div>
 
-    <div class="faq">
+    <div class="faq-list">
 
-      <details class="reveal">
-        <summary>Apakah bisa konsultasi melalui WhatsApp?</summary>
-        <p>
-          Bisa. Silakan gunakan tombol WhatsApp yang tersedia
-          di website untuk menyampaikan kebutuhan Anda.
-        </p>
-      </details>
+      <div class="faq reveal">
 
-      <details class="reveal">
-        <summary>Apakah harga paket tersedia di website?</summary>
-        <p>
-          Detail harga dapat berubah sesuai program dan waktu.
-          Silakan konfirmasi langsung melalui WhatsApp.
-        </p>
-      </details>
+        <button>
+          Bagaimana cara konsultasi?
+          <span>+</span>
+        </button>
 
-      <details class="reveal">
-        <summary>Apakah melayani rombongan keluarga?</summary>
-        <p>
-          Anda dapat menyampaikan jumlah jamaah dan kebutuhan
-          rombongan melalui formulir konsultasi.
-        </p>
-      </details>
+        <div class="faq-content">
+          Anda dapat mengisi formulir konsultasi
+          atau langsung menghubungi WhatsApp
+          AL UBAIDILLAH TRAVEL.
+        </div>
 
-      <details class="reveal">
-        <summary>Apakah tersedia Wisata Halal?</summary>
-        <p>
-          Website menyediakan kategori Wisata Halal. Destinasi
-          dan detail perjalanan dapat dikonsultasikan terlebih dahulu.
-        </p>
-      </details>
+      </div>
 
-      <details class="reveal">
-        <summary>Bagaimana cara memulai konsultasi?</summary>
-        <p>
-          Isi formulir konsultasi atau langsung tekan tombol
-          WhatsApp untuk menghubungi AL UBAIDILLAH TRAVEL.
-        </p>
-      </details>
+      <div class="faq reveal">
+
+        <button>
+          Apakah tersedia program Umroh?
+          <span>+</span>
+        </button>
+
+        <div class="faq-content">
+          Tersedia informasi program Umroh.
+          Detail jadwal, harga dan fasilitas
+          dapat dikonfirmasi melalui WhatsApp.
+        </div>
+
+      </div>
+
+      <div class="faq reveal">
+
+        <button>
+          Apakah melayani Wisata Halal?
+          <span>+</span>
+        </button>
+
+        <div class="faq-content">
+          Ya, konsultasi Wisata Halal dan
+          custom trip dapat dilakukan melalui
+          WhatsApp.
+        </div>
+
+      </div>
+
+      <div class="faq reveal">
+
+        <button>
+          Apakah harga sudah tercantum?
+          <span>+</span>
+        </button>
+
+        <div class="faq-content">
+          Harga tidak ditampilkan secara permanen
+          karena program, jadwal dan fasilitas
+          dapat berbeda. Silakan konfirmasi
+          program terbaru melalui WhatsApp.
+        </div>
+
+      </div>
+
+      <div class="faq reveal">
+
+        <button>
+          Apakah website ini resmi?
+          <span>+</span>
+        </button>
+
+        <div class="faq-content">
+          Informasi legalitas dan status penyelenggara
+          harus dikonfirmasi berdasarkan dokumen
+          resmi sebelum dicantumkan sebagai klaim
+          pada website.
+        </div>
+
+      </div>
 
     </div>
 
@@ -2149,39 +2427,48 @@ footer li{
 </section>
 
 <!-- CTA -->
-
 <section class="cta">
 
   <div class="container">
 
     <div class="cta-box reveal">
 
-      <div class="eyebrow" style="color:var(--gold2);letter-spacing:3px;font-size:12px;">
-        AL UBAIDILLAH TRAVEL
+      <div>
+
+        <h2>
+          Siap Merencanakan Perjalanan?
+        </h2>
+
+        <p>
+          Jangan ragu untuk berkonsultasi.
+          Sampaikan kebutuhan perjalanan Anda
+          kepada AL UBAIDILLAH TRAVEL.
+        </p>
+
       </div>
 
-      <h2>
-        Siapkan langkah Anda menuju perjalanan yang bermakna.
-      </h2>
+      <div class="cta-actions">
 
-      <p>
-        Jangan ragu untuk berkonsultasi terlebih dahulu.
-        Sampaikan rencana perjalanan Anda kepada kami.
-      </p>
+        <a
+          href="https://wa.me/6283870874140?text=Assalamu%27alaikum%20AL%20UBAIDILLAH%20TRAVEL%2C%20saya%20ingin%20konsultasi."
+          target="_blank"
+          rel="noopener"
+          class="btn btn-wa wa-btn">
 
-      <div class="hero-buttons" style="justify-content:center;">
+          <svg class="wa-icon">
+            <use href="#whatsapp-icon"></use>
+          </svg>
 
-        <a href="https://wa.me/6283870874140?text=Assalamu%27alaikum%20AL%20UBAIDILLAH%20TRAVEL%2C%20saya%20ingin%20konsultasi%20program%20perjalanan."
-           target="_blank"
-           class="btn btn-wa">
-
-          <span class="wa-icon"></span>
           Hubungi WhatsApp
 
         </a>
 
-        <a href="#konsultasi" class="btn btn-gold">
-          Isi Form Konsultasi
+        <a
+          href="mailto:adnanfarisi007@gmail.com"
+          class="btn btn-outline">
+
+          ✉ Email Kami
+
         </a>
 
       </div>
@@ -2192,62 +2479,76 @@ footer li{
 
 </section>
 
-</main>
-
 <!-- FOOTER -->
-
 <footer>
 
   <div class="container">
 
     <div class="footer-grid">
 
-      <div>
-        <div class="footer-title">
-          AL UBAIDILLAH TRAVEL
+      <div class="footer-brand">
+
+        <div class="logo">
+
+          <div class="logo-mark">☪</div>
+
+          <div class="logo-text">
+            AL UBAIDILLAH TRAVEL
+            <span>UMROH • HAJI • WISATA HALAL</span>
+          </div>
+
         </div>
 
         <p>
-          Umroh • Haji • Wisata Halal
+          Melayani Perjalanan Ibadah dengan
+          Amanah dan Nyaman.
         </p>
 
-        <p style="margin-top:10px;">
-          Melayani Perjalanan Ibadah dengan Amanah dan Nyaman.
-        </p>
       </div>
 
       <div>
+
         <div class="footer-title">
-          Navigasi
+          MENU
         </div>
 
-        <ul>
-          <li><a href="#beranda">Beranda</a></li>
-          <li><a href="#program">Program</a></li>
-          <li><a href="#tentang">Tentang</a></li>
-          <li><a href="#galeri">Galeri</a></li>
-          <li><a href="#faq">FAQ</a></li>
-        </ul>
+        <div class="footer-links">
+
+          <a href="#beranda">Beranda</a>
+          <a href="#program">Program</a>
+          <a href="#tentang">Tentang</a>
+          <a href="#galeri">Galeri</a>
+          <a href="#faq">FAQ</a>
+
+        </div>
+
       </div>
 
       <div>
+
         <div class="footer-title">
-          Kontak
+          KONTAK
         </div>
 
-        <ul>
-          <li>
-            <a href="https://wa.me/6283870874140" target="_blank">
-              WhatsApp: 083870874140
-            </a>
-          </li>
+        <div class="footer-links">
 
-          <li>
-            <a href="mailto:adnanfarisi007@gmail.com">
-              adnanfarisi007@gmail.com
-            </a>
-          </li>
-        </ul>
+          <a
+            href="https://wa.me/6283870874140"
+            target="_blank"
+            rel="noopener">
+            0838 7087 4140
+          </a>
+
+          <a href="mailto:adnanfarisi007@gmail.com">
+            adnanfarisi007@gmail.com
+          </a>
+
+          <a href="#konsultasi">
+            Konsultasi Program
+          </a>
+
+        </div>
+
       </div>
 
     </div>
@@ -2255,11 +2556,11 @@ footer li{
     <div class="footer-bottom">
 
       <span>
-        © 2026 AL UBAIDILLAH TRAVEL. All rights reserved.
+        © 2026 AL UBAIDILLAH TRAVEL. All Rights Reserved.
       </span>
 
       <span>
-        Website Travel • Umroh • Haji • Wisata Halal
+        Umroh • Haji • Wisata Halal
       </span>
 
     </div>
@@ -2269,74 +2570,128 @@ footer li{
 </footer>
 
 <!-- FLOATING WHATSAPP -->
-
 <a
+  class="wa-float"
   href="https://wa.me/6283870874140?text=Assalamu%27alaikum%20AL%20UBAIDILLAH%20TRAVEL%2C%20saya%20ingin%20konsultasi."
   target="_blank"
-  class="wa-floating"
+  rel="noopener"
   aria-label="Hubungi AL UBAIDILLAH TRAVEL melalui WhatsApp">
 
-  <span class="wa-icon"></span>
+  <span class="wa-pulse"></span>
+
+  <svg class="wa-icon large">
+    <use href="#whatsapp-icon"></use>
+  </svg>
 
 </a>
 
 <script>
 
-/* MOBILE MENU */
+/* =========================
+   MOBILE MENU
+========================= */
 
 const menuBtn = document.getElementById("menuBtn");
-const mainNav = document.getElementById("mainNav");
+const navLinks = document.getElementById("navLinks");
 
 menuBtn.addEventListener("click", () => {
-  mainNav.classList.toggle("open");
+  navLinks.classList.toggle("active");
+
+  menuBtn.textContent =
+    navLinks.classList.contains("active")
+      ? "✕"
+      : "☰";
 });
 
-document.querySelectorAll("#mainNav a").forEach(link => {
+document.querySelectorAll(".nav-links a").forEach(link => {
   link.addEventListener("click", () => {
-    mainNav.classList.remove("open");
+    navLinks.classList.remove("active");
+    menuBtn.textContent = "☰";
   });
 });
 
 
-/* PROGRAM TABS */
+/* =========================
+   PROGRAM TABS
+========================= */
 
-const switchButtons = document.querySelectorAll(".switch-btn");
-const panels = document.querySelectorAll(".program-panel");
+const tabs = document.querySelectorAll(".tab");
+const panels = document.querySelectorAll(".tab-panel");
 
-switchButtons.forEach(button => {
+tabs.forEach(tab => {
 
-  button.addEventListener("click", () => {
+  tab.addEventListener("click", () => {
 
-    const target = button.dataset.target;
+    const target = tab.dataset.tab;
 
-    switchButtons.forEach(btn => {
-      btn.classList.remove("active");
+    tabs.forEach(item => {
+      item.classList.remove("active");
     });
 
     panels.forEach(panel => {
       panel.classList.remove("active");
     });
 
-    button.classList.add("active");
+    tab.classList.add("active");
 
-    const selected = document.getElementById(target);
-
-    if(selected){
-      selected.classList.add("active");
-    }
+    document.getElementById(target)
+      .classList.add("active");
 
   });
 
 });
 
 
-/* FORM WHATSAPP */
+/* =========================
+   FAQ
+========================= */
 
-const consultForm = document.getElementById("consultForm");
+document.querySelectorAll(".faq button")
+.forEach(button => {
 
-consultForm.addEventListener("submit", function(event){
+  button.addEventListener("click", () => {
 
-  event.preventDefault();
+    const faq = button.parentElement;
+
+    document.querySelectorAll(".faq")
+    .forEach(item => {
+
+      if(item !== faq){
+        item.classList.remove("open");
+
+        const icon = item.querySelector("button span");
+
+        if(icon){
+          icon.textContent = "+";
+        }
+      }
+
+    });
+
+    faq.classList.toggle("open");
+
+    const icon = button.querySelector("span");
+
+    icon.textContent =
+      faq.classList.contains("open")
+        ? "−"
+        : "+";
+
+  });
+
+});
+
+
+/* =========================
+   WHATSAPP CONSULTATION
+========================= */
+
+const consultForm =
+  document.getElementById("consultForm");
+
+consultForm.addEventListener("submit", function(e){
+
+  e.preventDefault();
 
   const nama =
     document.getElementById("nama").value.trim();
@@ -2347,11 +2702,11 @@ consultForm.addEventListener("submit", function(event){
   const program =
     document.getElementById("programSelect").value;
 
-  const jumlah =
-    document.getElementById("jumlah").value;
+  const jamaah =
+    document.getElementById("jamaah").value.trim();
 
-  const waktu =
-    document.getElementById("waktu").value.trim();
+  const keberangkatan =
+    document.getElementById("keberangkatan").value.trim();
 
   const kontak =
     document.getElementById("kontak").value.trim();
@@ -2362,54 +2717,75 @@ consultForm.addEventListener("submit", function(event){
   const text =
 `Assalamu'alaikum AL UBAIDILLAH TRAVEL.
 
-Saya ingin konsultasi perjalanan.
+Saya ingin berkonsultasi mengenai perjalanan.
 
 Nama: ${nama}
 Kota: ${kota}
 Program: ${program}
-Jumlah Jamaah: ${jumlah}
-Perkiraan Keberangkatan: ${waktu || "-"}
+Jumlah Jamaah: ${jamaah}
+Perkiraan Keberangkatan: ${keberangkatan || "-"}
 Kontak Tambahan: ${kontak || "-"}
-
 Pesan:
 ${pesan || "-"}
 
-Mohon informasi lebih lanjut.
+Mohon informasi lebih lanjut mengenai program, jadwal, fasilitas dan persyaratannya.
+
 Terima kasih.`;
 
   const url =
-    "https://wa.me/6283870874140?text=" +
-    encodeURIComponent(text);
+    "https://wa.me/6283870874140?text="
+    + encodeURIComponent(text);
 
   window.open(url, "_blank");
 
 });
 
 
-/* REVEAL ANIMATION */
+/* =========================
+   REVEAL ANIMATION
+========================= */
 
 const observer =
-new IntersectionObserver(
-  entries => {
+  new IntersectionObserver(
+    entries => {
 
-    entries.forEach(entry => {
+      entries.forEach(entry => {
 
-      if(entry.isIntersecting){
+        if(entry.isIntersecting){
 
-        entry.target.classList.add("show");
+          entry.target.classList.add("show");
 
-      }
+          observer.unobserve(entry.target);
 
-    });
+        }
 
-  },
-  {
-    threshold:.12
-  }
-);
+      });
+
+    },
+    {
+      threshold:.12
+    }
+  );
 
 document.querySelectorAll(".reveal")
-.forEach(element => observer.observe(element));
+.forEach(el => observer.observe(el));
+
+
+/* =========================
+   CLOSE MENU ON ESC
+========================= */
+
+document.addEventListener("keydown", e => {
+
+  if(e.key === "Escape"){
+
+    navLinks.classList.remove("active");
+
+    menuBtn.textContent = "☰";
+
+  }
+
+});
 
 </script>
 
