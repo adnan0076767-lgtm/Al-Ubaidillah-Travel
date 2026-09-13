@@ -1,1469 +1,1895 @@
+```html
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>AL UBAIDILLAH TRAVEL | Umroh, Haji & Wisata Halal</title>
-
-  <meta name="description" content="AL UBAIDILLAH TRAVEL melayani perjalanan Umroh, Haji dan wisata halal dengan pelayanan amanah, nyaman dan profesional. Konsultasi melalui WhatsApp.">
-
-  <meta name="keywords" content="Al Ubaidillah Travel, travel umroh, travel haji, umroh murah, paket umroh, paket haji, wisata halal">
-
-  <meta name="author" content="AL UBAIDILLAH TRAVEL">
-
-  <meta name="theme-color" content="#071426">
-
-  <meta property="og:title" content="AL UBAIDILLAH TRAVEL | Umroh, Haji & Wisata Halal">
-  <meta property="og:description" content="Melayani perjalanan ibadah Umroh, Haji dan wisata halal dengan amanah dan nyaman.">
-  <meta property="og:type" content="website">
-
-  <style>
-    :root {
-      --navy: #071426;
-      --navy2: #0b1d35;
-      --navy3: #102944;
-      --gold: #d4af37;
-      --gold-light: #f3d675;
-      --white: #ffffff;
-      --text: #e9eef5;
-      --muted: #aebccc;
-      --card: rgba(255,255,255,0.06);
-      --border: rgba(212,175,55,0.25);
-      --shadow: 0 20px 60px rgba(0,0,0,0.30);
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background:
-        radial-gradient(circle at 20% 10%, rgba(212,175,55,0.08), transparent 30%),
-        linear-gradient(180deg, #071426, #09192d 45%, #06101e);
-      color: var(--text);
-      line-height: 1.7;
-      overflow-x: hidden;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .container {
-      width: min(1120px, 92%);
-      margin: auto;
-    }
-
-    /* ================= HEADER ================= */
-
-    header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-      background: rgba(7,20,38,0.90);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(212,175,55,0.15);
-    }
-
-    .nav {
-      height: 76px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .logo-icon {
-      width: 46px;
-      height: 46px;
-      border: 1px solid var(--gold);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--gold-light);
-      font-size: 22px;
-      box-shadow: 0 0 25px rgba(212,175,55,0.15);
-    }
-
-    .logo-text strong {
-      display: block;
-      color: var(--gold-light);
-      letter-spacing: 1.5px;
-      font-size: 16px;
-    }
-
-    .logo-text span {
-      font-size: 10px;
-      color: var(--muted);
-      letter-spacing: 2px;
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 25px;
-    }
-
-    nav a {
-      color: #dbe4ef;
-      font-size: 14px;
-      transition: .3s;
-    }
-
-    nav a:hover {
-      color: var(--gold-light);
-    }
-
-    .nav-cta {
-      padding: 10px 17px;
-      border: 1px solid var(--gold);
-      border-radius: 30px;
-      color: var(--gold-light) !important;
-    }
-
-    .menu-btn {
-      display: none;
-      border: 1px solid var(--gold);
-      background: transparent;
-      color: var(--gold-light);
-      border-radius: 8px;
-      font-size: 22px;
-      padding: 6px 10px;
-      cursor: pointer;
-    }
-
-    /* ================= HERO ================= */
-
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      position: relative;
-      overflow: hidden;
-      padding-top: 80px;
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      width: 600px;
-      height: 600px;
-      border-radius: 50%;
-      background: rgba(212,175,55,0.07);
-      filter: blur(10px);
-      right: -200px;
-      top: 100px;
-    }
-
-    .hero::after {
-      content: "☪";
-      position: absolute;
-      right: 8%;
-      top: 18%;
-      font-size: 240px;
-      color: rgba(212,175,55,0.035);
-      pointer-events: none;
-    }
-
-    .hero-content {
-      max-width: 760px;
-      position: relative;
-      z-index: 2;
-    }
-
-    .badge {
-      display: inline-flex;
-      padding: 8px 15px;
-      border: 1px solid var(--border);
-      border-radius: 30px;
-      color: var(--gold-light);
-      background: rgba(212,175,55,0.05);
-      font-size: 13px;
-      margin-bottom: 22px;
-    }
-
-    .hero h1 {
-      font-size: clamp(42px, 7vw, 78px);
-      line-height: 1.05;
-      letter-spacing: -2px;
-      margin-bottom: 22px;
-    }
-
-    .hero h1 span {
-      color: var(--gold-light);
-    }
-
-    .hero p {
-      color: var(--muted);
-      max-width: 650px;
-      font-size: 18px;
-      margin-bottom: 30px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 14px 23px;
-      border-radius: 10px;
-      font-weight: bold;
-      transition: .3s;
-      cursor: pointer;
-    }
-
-    .btn-gold {
-      color: #111;
-      background: linear-gradient(135deg, var(--gold-light), var(--gold));
-      box-shadow: 0 10px 30px rgba(212,175,55,0.18);
-    }
-
-    .btn-gold:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 15px 35px rgba(212,175,55,0.30);
-    }
-
-    .btn-outline {
-      border: 1px solid rgba(212,175,55,0.5);
-      color: var(--gold-light);
-    }
-
-    .btn-outline:hover {
-      background: rgba(212,175,55,0.08);
-      transform: translateY(-3px);
-    }
-
-    .hero-info {
-      display: flex;
-      gap: 35px;
-      margin-top: 50px;
-      flex-wrap: wrap;
-    }
-
-    .hero-info div {
-      border-left: 2px solid var(--gold);
-      padding-left: 12px;
-    }
-
-    .hero-info strong {
-      display: block;
-      color: var(--white);
-      font-size: 18px;
-    }
-
-    .hero-info span {
-      color: var(--muted);
-      font-size: 12px;
-    }
-
-    /* ================= SECTION ================= */
-
-    section {
-      padding: 95px 0;
-      position: relative;
-    }
-
-    .section-title {
-      text-align: center;
-      max-width: 700px;
-      margin: 0 auto 50px;
-    }
-
-    .section-title small {
-      color: var(--gold-light);
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      font-size: 11px;
-    }
-
-    .section-title h2 {
-      font-size: clamp(30px, 5vw, 45px);
-      margin: 8px 0 14px;
-    }
-
-    .section-title p {
-      color: var(--muted);
-    }
-
-    /* ================= CARDS ================= */
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-
-    .card {
-      background: linear-gradient(145deg, rgba(255,255,255,.07), rgba(255,255,255,.025));
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 28px;
-      box-shadow: var(--shadow);
-      transition: .35s;
-    }
-
-    .card:hover {
-      transform: translateY(-8px);
-      border-color: rgba(243,214,117,.65);
-    }
-
-    .card-icon {
-      width: 58px;
-      height: 58px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 15px;
-      background: rgba(212,175,55,.09);
-      border: 1px solid var(--border);
-      color: var(--gold-light);
-      font-size: 27px;
-      margin-bottom: 20px;
-    }
-
-    .card h3 {
-      margin-bottom: 10px;
-      color: var(--white);
-    }
-
-    .card p {
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    /* ================= PACKAGE ================= */
-
-    .packages {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-
-    .package {
-      overflow: hidden;
-      border-radius: 20px;
-      border: 1px solid var(--border);
-      background: #0b1c31;
-      box-shadow: var(--shadow);
-      transition: .35s;
-    }
-
-    .package:hover {
-      transform: translateY(-8px);
-    }
-
-    .package-top {
-      height: 180px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background:
-        radial-gradient(circle, rgba(243,214,117,.18), transparent 45%),
-        linear-gradient(135deg, #0e2b4c, #071426);
-      font-size: 65px;
-      color: var(--gold-light);
-    }
-
-    .package-body {
-      padding: 25px;
-    }
-
-    .package-label {
-      color: var(--gold-light);
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
-
-    .package h3 {
-      margin: 5px 0 8px;
-      font-size: 22px;
-    }
-
-    .package p {
-      color: var(--muted);
-      font-size: 14px;
-      margin-bottom: 18px;
-    }
-
-    .package ul {
-      list-style: none;
-      margin-bottom: 20px;
-    }
-
-    .package li {
-      padding: 6px 0;
-      color: #d5dce5;
-      font-size: 13px;
-    }
-
-    .package li::before {
-      content: "✓";
-      color: var(--gold-light);
-      margin-right: 8px;
-    }
-
-    .price {
-      color: var(--gold-light);
-      font-size: 24px;
-      font-weight: bold;
-      margin-bottom: 17px;
-    }
-
-    .price span {
-      font-size: 12px;
-      color: var(--muted);
-      font-weight: normal;
-    }
-
-    /* ================= ABOUT ================= */
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
-      align-items: center;
-    }
-
-    .about-box {
-      border: 1px solid var(--border);
-      border-radius: 25px;
-      padding: 45px;
-      background:
-        radial-gradient(circle at 80% 20%, rgba(212,175,55,.09), transparent 35%),
-        rgba(255,255,255,.035);
-    }
-
-    .about-box .big-icon {
-      font-size: 80px;
-      color: var(--gold-light);
-      margin-bottom: 20px;
-    }
-
-    .about-text h2 {
-      font-size: 40px;
-      margin-bottom: 15px;
-    }
-
-    .about-text p {
-      color: var(--muted);
-      margin-bottom: 18px;
-    }
-
-    .checks {
-      list-style: none;
-    }
-
-    .checks li {
-      margin: 10px 0;
-      color: #dce5ef;
-    }
-
-    .checks li::before {
-      content: "✦";
-      color: var(--gold-light);
-      margin-right: 10px;
-    }
-
-    /* ================= STEPS ================= */
-
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-    }
-
-    .step {
-      text-align: center;
-      padding: 25px 15px;
-    }
-
-    .step-number {
-      width: 52px;
-      height: 52px;
-      margin: 0 auto 18px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(212,175,55,.09);
-      border: 1px solid var(--gold);
-      color: var(--gold-light);
-      font-weight: bold;
-      font-size: 18px;
-    }
-
-    .step h3 {
-      margin-bottom: 8px;
-    }
-
-    .step p {
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    /* ================= TESTIMONI ================= */
-
-    .testimonials {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-
-    .testimonial {
-      padding: 28px;
-      border-radius: 18px;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,.035);
-    }
-
-    .stars {
-      color: var(--gold-light);
-      letter-spacing: 4px;
-      margin-bottom: 15px;
-    }
-
-    .testimonial p {
-      color: #d3dce7;
-      font-size: 14px;
-      margin-bottom: 18px;
-    }
-
-    .person {
-      color: var(--gold-light);
-      font-weight: bold;
-      font-size: 13px;
-    }
-
-    /* ================= GALLERY ================= */
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 15px;
-    }
-
-    .gallery-item {
-      height: 190px;
-      border-radius: 15px;
-      border: 1px solid var(--border);
-      background:
-        radial-gradient(circle at 50% 40%, rgba(243,214,117,.17), transparent 35%),
-        linear-gradient(145deg, #102f4f, #071426);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--gold-light);
-      font-size: 48px;
-      transition: .3s;
-    }
-
-    .gallery-item:hover {
-      transform: scale(1.025);
-    }
-
-    /* ================= CTA ================= */
-
-    .cta {
-      margin-top: 20px;
-      border-radius: 25px;
-      padding: 55px 30px;
-      text-align: center;
-      border: 1px solid var(--gold);
-      background:
-        radial-gradient(circle at center, rgba(212,175,55,.12), transparent 60%),
-        #0a1c31;
-    }
-
-    .cta h2 {
-      font-size: clamp(28px, 5vw, 43px);
-      margin-bottom: 12px;
-    }
-
-    .cta p {
-      color: var(--muted);
-      max-width: 650px;
-      margin: 0 auto 25px;
-    }
-
-    /* ================= CONTACT ================= */
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .contact-card {
-      padding: 28px;
-      text-align: center;
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      background: rgba(255,255,255,.035);
-    }
-
-    .contact-card .icon {
-      font-size: 30px;
-      margin-bottom: 10px;
-    }
-
-    .contact-card h3 {
-      color: var(--gold-light);
-      margin-bottom: 7px;
-    }
-
-    .contact-card p {
-      color: var(--muted);
-      font-size: 14px;
-      word-break: break-word;
-    }
-
-    /* ================= FOOTER ================= */
-
-    footer {
-      border-top: 1px solid rgba(212,175,55,.15);
-      padding: 35px 0;
-      background: #050e1a;
-    }
-
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      align-items: center;
-    }
-
-    .footer-brand {
-      color: var(--gold-light);
-      font-weight: bold;
-      letter-spacing: 1px;
-    }
-
-    .footer-text {
-      color: #718197;
-      font-size: 12px;
-    }
-
-    /* ================= FLOATING WA ================= */
-
-    .wa-float {
-      position: fixed;
-      right: 22px;
-      bottom: 22px;
-      z-index: 999;
-      width: 58px;
-      height: 58px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #1fba62;
-      color: white;
-      font-size: 26px;
-      box-shadow: 0 12px 35px rgba(0,0,0,.35);
-      transition: .3s;
-    }
-
-    .wa-float:hover {
-      transform: scale(1.08);
-    }
-
-    /* ================= MOBILE ================= */
-
-    @media (max-width: 850px) {
-
-      nav {
-        position: absolute;
-        top: 76px;
-        left: 4%;
-        right: 4%;
-        display: none;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0;
-        padding: 12px;
-        border: 1px solid var(--border);
-        border-radius: 15px;
-        background: #08182b;
-      }
-
-      nav.active {
-        display: flex;
-      }
-
-      nav a {
-        padding: 13px;
-        border-bottom: 1px solid rgba(255,255,255,.05);
-      }
-
-      .menu-btn {
-        display: block;
-      }
-
-      .cards,
-      .packages,
-      .testimonials,
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .about-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .steps {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .gallery {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .hero {
-        min-height: auto;
-        padding: 145px 0 80px;
-      }
-
-      .hero h1 {
-        letter-spacing: -1px;
-      }
-
-      .hero p {
-        font-size: 16px;
-      }
-
-      .about-box {
-        padding: 30px;
-      }
-
-      .footer-inner {
-        flex-direction: column;
-        text-align: center;
-      }
-    }
-
-    @media (max-width: 500px) {
-
-      section {
-        padding: 75px 0;
-      }
-
-      .hero-info {
-        gap: 20px;
-      }
-
-      .hero-buttons {
-        flex-direction: column;
-      }
-
-      .btn {
-        width: 100%;
-      }
-
-      .steps {
-        grid-template-columns: 1fr;
-      }
-
-      .gallery {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .gallery-item {
-        height: 145px;
-      }
-
-      .wa-float {
-        right: 16px;
-        bottom: 16px;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AL UBAIDILLAH TRAVEL | Umroh, Haji & Wisata Halal</title>
+
+<meta name="description" content="AL UBAIDILLAH TRAVEL melayani konsultasi perjalanan Umroh, Haji dan wisata halal dengan pelayanan amanah, nyaman dan profesional.">
+<meta name="keywords" content="Al Ubaidillah Travel, travel umroh, travel haji, paket umroh, paket haji, wisata halal">
+<meta name="author" content="AL UBAIDILLAH TRAVEL">
+<meta name="theme-color" content="#071525">
+
+<meta property="og:title" content="AL UBAIDILLAH TRAVEL | Umroh, Haji & Wisata Halal">
+<meta property="og:description" content="Melayani perjalanan ibadah dengan amanah dan nyaman. Konsultasi melalui WhatsApp.">
+<meta property="og:type" content="website">
+
+<style>
+:root{
+  --navy:#061321;
+  --navy2:#091b2e;
+  --navy3:#0d2741;
+  --gold:#c9a227;
+  --gold2:#f2d36b;
+  --gold3:#ffe9a0;
+  --white:#fff;
+  --text:#eaf0f7;
+  --muted:#aab8c8;
+  --line:rgba(242,211,107,.22);
+  --card:rgba(255,255,255,.055);
+  --shadow:0 25px 70px rgba(0,0,0,.32);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:
+    radial-gradient(circle at 15% 5%,rgba(201,162,39,.10),transparent 28%),
+    radial-gradient(circle at 90% 25%,rgba(34,91,140,.16),transparent 30%),
+    linear-gradient(180deg,#061321,#081a2c 50%,#040c15);
+  color:var(--text);
+  line-height:1.7;
+  overflow-x:hidden;
+}
+
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  background-image:
+    linear-gradient(rgba(255,255,255,.012) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.012) 1px,transparent 1px);
+  background-size:50px 50px;
+  z-index:-1;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+button{
+  font-family:inherit;
+}
+
+.container{
+  width:min(1160px,92%);
+  margin:auto;
+}
+
+section{
+  padding:100px 0;
+  position:relative;
+}
+
+/* HEADER */
+
+header{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:1000;
+  background:rgba(6,19,33,.88);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(242,211,107,.12);
+}
+
+.nav{
+  min-height:78px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.logo-mark{
+  width:47px;
+  height:47px;
+  border:1px solid var(--gold2);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  color:var(--gold2);
+  font-size:22px;
+  box-shadow:0 0 25px rgba(201,162,39,.12);
+}
+
+.logo-mark::after{
+  content:"";
+  position:absolute;
+  width:29px;
+  height:29px;
+  border:1px solid rgba(242,211,107,.45);
+  transform:rotate(45deg);
+}
+
+.logo-name strong{
+  display:block;
+  font-size:15px;
+  letter-spacing:1.8px;
+  color:var(--gold3);
+}
+
+.logo-name span{
+  font-size:9px;
+  letter-spacing:3px;
+  color:var(--muted);
+}
+
+nav{
+  display:flex;
+  align-items:center;
+  gap:25px;
+}
+
+nav a{
+  font-size:13px;
+  color:#dce5ef;
+  transition:.3s;
+}
+
+nav a:hover{
+  color:var(--gold2);
+}
+
+.nav-button{
+  border:1px solid var(--gold);
+  padding:10px 17px;
+  border-radius:30px;
+  color:var(--gold3)!important;
+}
+
+.menu{
+  display:none;
+  background:none;
+  border:1px solid var(--gold);
+  color:var(--gold2);
+  padding:7px 11px;
+  border-radius:8px;
+  font-size:21px;
+}
+
+/* HERO */
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  padding-top:120px;
+  overflow:hidden;
+}
+
+.hero-glow{
+  position:absolute;
+  width:650px;
+  height:650px;
+  border-radius:50%;
+  right:-250px;
+  top:70px;
+  background:radial-gradient(circle,rgba(201,162,39,.13),transparent 67%);
+}
+
+.hero-pattern{
+  position:absolute;
+  right:5%;
+  top:24%;
+  width:350px;
+  height:350px;
+  border:1px solid rgba(242,211,107,.12);
+  transform:rotate(45deg);
+}
+
+.hero-pattern::before,
+.hero-pattern::after{
+  content:"";
+  position:absolute;
+  inset:35px;
+  border:1px solid rgba(242,211,107,.10);
+}
+
+.hero-pattern::after{
+  inset:75px;
+}
+
+.hero-content{
+  max-width:820px;
+  position:relative;
+  z-index:2;
+}
+
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  padding:8px 15px;
+  border:1px solid var(--line);
+  border-radius:30px;
+  background:rgba(201,162,39,.05);
+  color:var(--gold3);
+  font-size:12px;
+  letter-spacing:.5px;
+  margin-bottom:24px;
+}
+
+.eyebrow::before{
+  content:"✦";
+  color:var(--gold2);
+}
+
+.hero h1{
+  font-size:clamp(43px,7vw,82px);
+  line-height:1.02;
+  letter-spacing:-3px;
+  max-width:900px;
+}
+
+.hero h1 span{
+  color:var(--gold2);
+  display:block;
+}
+
+.hero-description{
+  color:var(--muted);
+  max-width:690px;
+  font-size:17px;
+  margin:25px 0 31px;
+}
+
+.buttons{
+  display:flex;
+  gap:13px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:14px 22px;
+  border-radius:10px;
+  font-size:14px;
+  font-weight:bold;
+  transition:.3s;
+}
+
+.btn-gold{
+  background:linear-gradient(135deg,var(--gold3),var(--gold));
+  color:#111;
+  box-shadow:0 12px 35px rgba(201,162,39,.18);
+}
+
+.btn-gold:hover{
+  transform:translateY(-3px);
+  box-shadow:0 18px 45px rgba(201,162,39,.28);
+}
+
+.btn-outline{
+  border:1px solid rgba(242,211,107,.42);
+  color:var(--gold3);
+}
+
+.btn-outline:hover{
+  background:rgba(242,211,107,.06);
+  transform:translateY(-3px);
+}
+
+.hero-trust{
+  display:flex;
+  gap:38px;
+  flex-wrap:wrap;
+  margin-top:48px;
+}
+
+.trust-item{
+  padding-left:13px;
+  border-left:2px solid var(--gold);
+}
+
+.trust-item strong{
+  display:block;
+  color:white;
+  font-size:17px;
+}
+
+.trust-item span{
+  display:block;
+  color:var(--muted);
+  font-size:11px;
+}
+
+/* SECTION TITLE */
+
+.section-head{
+  max-width:720px;
+  text-align:center;
+  margin:0 auto 52px;
+}
+
+.section-head small{
+  color:var(--gold2);
+  font-size:10px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.section-head h2{
+  font-size:clamp(31px,5vw,47px);
+  line-height:1.15;
+  margin:9px 0 14px;
+}
+
+.section-head p{
+  color:var(--muted);
+  font-size:14px;
+}
+
+/* STATS */
+
+.stats{
+  margin-top:-35px;
+  position:relative;
+  z-index:5;
+}
+
+.stats-box{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:rgba(7,22,38,.92);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+
+.stat{
+  padding:25px 20px;
+  text-align:center;
+  border-right:1px solid rgba(242,211,107,.12);
+}
+
+.stat:last-child{
+  border-right:0;
+}
+
+.stat strong{
+  display:block;
+  color:var(--gold2);
+  font-size:24px;
+}
+
+.stat span{
+  color:var(--muted);
+  font-size:11px;
+}
+
+/* CARDS */
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:21px;
+}
+
+.card{
+  padding:28px;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:linear-gradient(145deg,rgba(255,255,255,.065),rgba(255,255,255,.025));
+  transition:.35s;
+  box-shadow:0 12px 40px rgba(0,0,0,.15);
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  border-color:rgba(242,211,107,.55);
+}
+
+.icon{
+  width:57px;
+  height:57px;
+  border-radius:15px;
+  border:1px solid var(--line);
+  background:rgba(201,162,39,.08);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:26px;
+  margin-bottom:19px;
+}
+
+.card h3{
+  margin-bottom:9px;
+}
+
+.card p{
+  color:var(--muted);
+  font-size:13px;
+}
+
+/* PACKAGES */
+
+.package-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.package{
+  border:1px solid var(--line);
+  border-radius:20px;
+  overflow:hidden;
+  background:#091b2e;
+  box-shadow:var(--shadow);
+  transition:.35s;
+}
+
+.package:hover{
+  transform:translateY(-8px);
+}
+
+.package-top{
+  min-height:190px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  background:
+    radial-gradient(circle at center,rgba(242,211,107,.16),transparent 43%),
+    linear-gradient(135deg,#102e4c,#061321);
+}
+
+.package-symbol{
+  width:95px;
+  height:95px;
+  border:1px solid rgba(242,211,107,.55);
+  transform:rotate(45deg);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.package-symbol span{
+  transform:rotate(-45deg);
+  font-size:45px;
+}
+
+.package-body{
+  padding:27px;
+}
+
+.package-tag{
+  color:var(--gold2);
+  font-size:10px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.package h3{
+  font-size:23px;
+  margin:5px 0 8px;
+}
+
+.package p{
+  color:var(--muted);
+  font-size:13px;
+  margin-bottom:18px;
+}
+
+.features{
+  list-style:none;
+  margin-bottom:22px;
+}
+
+.features li{
+  color:#dce4ed;
+  font-size:12px;
+  padding:5px 0;
+}
+
+.features li::before{
+  content:"✓";
+  color:var(--gold2);
+  margin-right:8px;
+}
+
+.package-price{
+  color:var(--gold2);
+  font-size:20px;
+  font-weight:bold;
+  margin-bottom:16px;
+}
+
+.package-price small{
+  color:var(--muted);
+  font-size:10px;
+  font-weight:normal;
+}
+
+/* ABOUT */
+
+.about{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+.about-visual{
+  min-height:430px;
+  border:1px solid var(--line);
+  border-radius:25px;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:
+    radial-gradient(circle,rgba(242,211,107,.13),transparent 45%),
+    linear-gradient(145deg,#0d2945,#061321);
+  overflow:hidden;
+}
+
+.about-visual::before,
+.about-visual::after{
+  content:"";
+  position:absolute;
+  border:1px solid rgba(242,211,107,.15);
+  transform:rotate(45deg);
+}
+
+.about-visual::before{
+  width:270px;
+  height:270px;
+}
+
+.about-visual::after{
+  width:190px;
+  height:190px;
+}
+
+.about-emblem{
+  position:relative;
+  z-index:2;
+  text-align:center;
+}
+
+.about-emblem .moon{
+  font-size:85px;
+  color:var(--gold2);
+}
+
+.about-emblem strong{
+  display:block;
+  letter-spacing:3px;
+  font-size:18px;
+  color:white;
+}
+
+.about-emblem span{
+  color:var(--muted);
+  font-size:10px;
+  letter-spacing:3px;
+}
+
+.about-copy small{
+  color:var(--gold2);
+  letter-spacing:3px;
+  font-size:10px;
+}
+
+.about-copy h2{
+  font-size:clamp(31px,5vw,47px);
+  line-height:1.12;
+  margin:10px 0 18px;
+}
+
+.about-copy p{
+  color:var(--muted);
+  font-size:14px;
+  margin-bottom:15px;
+}
+
+.check-list{
+  list-style:none;
+  margin-top:20px;
+}
+
+.check-list li{
+  color:#dce4ed;
+  margin:9px 0;
+  font-size:13px;
+}
+
+.check-list li::before{
+  content:"✦";
+  color:var(--gold2);
+  margin-right:10px;
+}
+
+/* SCHEDULE */
+
+.schedule{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.schedule-card{
+  padding:25px;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:var(--card);
+}
+
+.month{
+  display:inline-block;
+  padding:5px 10px;
+  border-radius:20px;
+  background:rgba(201,162,39,.1);
+  color:var(--gold2);
+  font-size:10px;
+  letter-spacing:1px;
+}
+
+.schedule-card h3{
+  margin:12px 0 4px;
+}
+
+.schedule-card p{
+  color:var(--muted);
+  font-size:12px;
+}
+
+.schedule-status{
+  margin-top:17px;
+  padding-top:14px;
+  border-top:1px solid rgba(255,255,255,.07);
+  color:var(--gold2);
+  font-size:12px;
+}
+
+/* FACILITIES */
+
+.facilities{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:17px;
+}
+
+.facility{
+  padding:23px 17px;
+  text-align:center;
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:rgba(255,255,255,.035);
+}
+
+.facility-icon{
+  font-size:31px;
+  margin-bottom:9px;
+}
+
+.facility h3{
+  font-size:14px;
+}
+
+.facility p{
+  color:var(--muted);
+  font-size:11px;
+  margin-top:4px;
+}
+
+/* STEPS */
+
+.steps{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:17px;
+}
+
+.step{
+  text-align:center;
+  padding:25px 13px;
+}
+
+.step-number{
+  width:54px;
+  height:54px;
+  margin:0 auto 17px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  border:1px solid var(--gold);
+  color:var(--gold2);
+  background:rgba(201,162,39,.07);
+  font-weight:bold;
+}
+
+.step h3{
+  font-size:15px;
+  margin-bottom:6px;
+}
+
+.step p{
+  color:var(--muted);
+  font-size:12px;
+}
+
+/* TESTIMONIAL */
+
+.testimonials{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.testimonial{
+  padding:27px;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:var(--card);
+}
+
+.stars{
+  color:var(--gold2);
+  letter-spacing:3px;
+  margin-bottom:13px;
+}
+
+.testimonial p{
+  color:#d9e1ea;
+  font-size:13px;
+  margin-bottom:18px;
+}
+
+.person{
+  color:var(--gold2);
+  font-size:12px;
+  font-weight:bold;
+}
+
+/* FAQ */
+
+.faq{
+  max-width:820px;
+  margin:auto;
+}
+
+details{
+  border:1px solid var(--line);
+  border-radius:13px;
+  margin-bottom:11px;
+  background:rgba(255,255,255,.035);
+  overflow:hidden;
+}
+
+summary{
+  cursor:pointer;
+  padding:17px 20px;
+  color:white;
+  font-weight:bold;
+  font-size:13px;
+}
+
+details p{
+  padding:0 20px 18px;
+  color:var(--muted);
+  font-size:12px;
+}
+
+/* CTA */
+
+.cta{
+  text-align:center;
+  border:1px solid var(--gold);
+  border-radius:25px;
+  padding:65px 25px;
+  background:
+    radial-gradient(circle at center,rgba(201,162,39,.13),transparent 60%),
+    #091b2e;
+  box-shadow:var(--shadow);
+}
+
+.cta h2{
+  font-size:clamp(29px,5vw,46px);
+  line-height:1.15;
+}
+
+.cta p{
+  color:var(--muted);
+  max-width:650px;
+  margin:13px auto 25px;
+  font-size:14px;
+}
+
+/* CONTACT */
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.contact-card{
+  text-align:center;
+  padding:27px;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:var(--card);
+  transition:.3s;
+}
+
+.contact-card:hover{
+  transform:translateY(-5px);
+  border-color:rgba(242,211,107,.55);
+}
+
+.contact-icon{
+  font-size:30px;
+  margin-bottom:8px;
+}
+
+.contact-card h3{
+  color:var(--gold2);
+  font-size:16px;
+}
+
+.contact-card p{
+  color:var(--muted);
+  font-size:12px;
+  margin-top:4px;
+  word-break:break-word;
+}
+
+/* FOOTER */
+
+footer{
+  padding:38px 0;
+  background:#030a12;
+  border-top:1px solid rgba(242,211,107,.12);
+}
+
+.footer{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  align-items:center;
+}
+
+.footer-name{
+  color:var(--gold2);
+  font-weight:bold;
+  letter-spacing:1.5px;
+}
+
+.footer-copy{
+  color:#68788c;
+  font-size:11px;
+}
+
+/* FLOATING WA */
+
+.wa{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  width:59px;
+  height:59px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#20bd63;
+  color:white;
+  font-size:25px;
+  z-index:999;
+  box-shadow:0 15px 40px rgba(0,0,0,.4);
+  transition:.3s;
+}
+
+.wa:hover{
+  transform:scale(1.08);
+}
+
+/* REVEAL */
+
+.reveal{
+  opacity:0;
+  transform:translateY(25px);
+  transition:opacity .8s ease,transform .8s ease;
+}
+
+.reveal.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+  nav{
+    display:none;
+    position:absolute;
+    left:4%;
+    right:4%;
+    top:78px;
+    flex-direction:column;
+    align-items:stretch;
+    gap:0;
+    padding:10px;
+    background:#07182a;
+    border:1px solid var(--line);
+    border-radius:15px;
+  }
+
+  nav.active{
+    display:flex;
+  }
+
+  nav a{
+    padding:13px;
+    border-bottom:1px solid rgba(255,255,255,.05);
+  }
+
+  .menu{
+    display:block;
+  }
+
+  .stats-box{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .stat:nth-child(2){
+    border-right:0;
+  }
+
+  .stat:nth-child(-n+2){
+    border-bottom:1px solid rgba(242,211,107,.12);
+  }
+
+  .cards,
+  .package-grid,
+  .schedule,
+  .testimonials,
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .about{
+    grid-template-columns:1fr;
+  }
+
+  .facilities{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .steps{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .hero{
+    padding-top:140px;
+  }
+
+  .hero-pattern{
+    opacity:.4;
+  }
+
+  .hero h1{
+    letter-spacing:-2px;
+  }
+}
+
+@media(max-width:520px){
+
+  section{
+    padding:75px 0;
+  }
+
+  .logo-name strong{
+    font-size:12px;
+  }
+
+  .hero h1{
+    font-size:43px;
+  }
+
+  .hero-description{
+    font-size:15px;
+  }
+
+  .buttons{
+    flex-direction:column;
+  }
+
+  .btn{
+    width:100%;
+  }
+
+  .hero-trust{
+    gap:20px;
+  }
+
+  .stats-box{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .stat{
+    padding:20px 8px;
+  }
+
+  .stat strong{
+    font-size:20px;
+  }
+
+  .about-visual{
+    min-height:330px;
+  }
+
+  .facilities,
+  .steps{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .cta{
+    padding:45px 20px;
+  }
+
+  .footer{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .wa{
+    right:15px;
+    bottom:15px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <!-- ================= HEADER ================= -->
+<header>
+  <div class="container nav">
 
-  <header>
-    <div class="container nav">
+    <a href="#beranda" class="logo">
+      <div class="logo-mark">☪</div>
+      <div class="logo-name">
+        <strong>AL UBAIDILLAH</strong>
+        <span>TRAVEL</span>
+      </div>
+    </a>
 
-      <a href="#beranda" class="logo">
-        <div class="logo-icon">☪</div>
-        <div class="logo-text">
+    <button class="menu" onclick="toggleMenu()">☰</button>
+
+    <nav id="nav">
+      <a href="#beranda">Beranda</a>
+      <a href="#paket">Paket</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#jadwal">Jadwal</a>
+      <a href="#faq">FAQ</a>
+      <a href="#kontak" class="nav-button">Konsultasi</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero" id="beranda">
+
+  <div class="hero-glow"></div>
+  <div class="hero-pattern"></div>
+
+  <div class="container">
+
+    <div class="hero-content reveal">
+
+      <div class="eyebrow">
+        UMROH • HAJI • WISATA HALAL
+      </div>
+
+      <h1>
+        Langkah Menuju
+        <span>Baitullah.</span>
+      </h1>
+
+      <p class="hero-description">
+        AL UBAIDILLAH TRAVEL hadir untuk membantu mempersiapkan
+        perjalanan ibadah Anda dengan pelayanan yang amanah,
+        nyaman dan profesional.
+      </p>
+
+      <div class="buttons">
+
+        <a
+          class="btn btn-gold"
+          target="_blank"
+          href="https://wa.me/6283870874140?text=Assalamu%27alaikum%20AL%20UBAIDILLAH%20TRAVEL%2C%20saya%20ingin%20konsultasi%20mengenai%20perjalanan%20Umroh%20atau%20Haji.">
+          📱 Konsultasi WhatsApp
+        </a>
+
+        <a class="btn btn-outline" href="#paket">
+          Lihat Paket →
+        </a>
+
+      </div>
+
+      <div class="hero-trust">
+
+        <div class="trust-item">
+          <strong>Umroh</strong>
+          <span>Program perjalanan ibadah</span>
+        </div>
+
+        <div class="trust-item">
+          <strong>Haji</strong>
+          <span>Informasi & konsultasi</span>
+        </div>
+
+        <div class="trust-item">
+          <strong>Halal</strong>
+          <span>Wisata bernuansa Islami</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- STATS -->
+
+<section class="stats">
+
+  <div class="container">
+
+    <div class="stats-box reveal">
+
+      <div class="stat">
+        <strong>01</strong>
+        <span>Pelayanan Amanah</span>
+      </div>
+
+      <div class="stat">
+        <strong>24/7</strong>
+        <span>Konsultasi WhatsApp</span>
+      </div>
+
+      <div class="stat">
+        <strong>🕋</strong>
+        <span>Perjalanan Ibadah</span>
+      </div>
+
+      <div class="stat">
+        <strong>✦</strong>
+        <span>Pelayanan Personal</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- KEUNGGULAN -->
+
+<section>
+
+  <div class="container">
+
+    <div class="section-head reveal">
+      <small>Kenapa Al Ubaidillah</small>
+      <h2>Perjalanan Ibadah Dimulai dari Persiapan yang Baik</h2>
+      <p>
+        Kami membantu memberikan informasi dan konsultasi
+        agar calon jamaah dapat mempersiapkan perjalanan
+        dengan lebih tenang.
+      </p>
+    </div>
+
+    <div class="cards">
+
+      <div class="card reveal">
+        <div class="icon">🤝</div>
+        <h3>Amanah</h3>
+        <p>
+          Mengutamakan komunikasi yang baik dan pelayanan
+          yang bertanggung jawab.
+        </p>
+      </div>
+
+      <div class="card reveal">
+        <div class="icon">📋</div>
+        <h3>Terencana</h3>
+        <p>
+          Informasi program disusun agar calon jamaah
+          dapat memahami perjalanan dengan lebih mudah.
+        </p>
+      </div>
+
+      <div class="card reveal">
+        <div class="icon">💬</div>
+        <h3>Mudah Konsultasi</h3>
+        <p>
+          Konsultasikan kebutuhan perjalanan langsung
+          melalui WhatsApp.
+        </p>
+      </div>
+
+      <div class="card reveal">
+        <div class="icon">🕌</div>
+        <h3>Nuansa Islami</h3>
+        <p>
+          Menghadirkan identitas perjalanan yang dekat
+          dengan nilai-nilai ibadah.
+        </p>
+      </div>
+
+      <div class="card reveal">
+        <div class="icon">✈️</div>
+        <h3>Persiapan Nyaman</h3>
+        <p>
+          Membantu calon jamaah mendapatkan gambaran
+          perjalanan sebelum keberangkatan.
+        </p>
+      </div>
+
+      <div class="card reveal">
+        <div class="icon">⭐</div>
+        <h3>Pelayanan Personal</h3>
+        <p>
+          Setiap calon jamaah dapat melakukan konsultasi
+          sesuai kebutuhan masing-masing.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PAKET -->
+
+<section id="paket">
+
+  <div class="container">
+
+    <div class="section-head reveal">
+      <small>Pilihan Program</small>
+      <h2>Paket Perjalanan</h2>
+      <p>
+        Contoh program untuk website. Detail harga,
+        jadwal dan fasilitas dapat diperbarui setelah data
+        resmi travel tersedia.
+      </p>
+    </div>
+
+    <div class="package-grid">
+
+      <div class="package reveal">
+
+        <div class="package-top">
+          <div class="package-symbol">
+            <span>🕋</span>
+          </div>
+        </div>
+
+        <div class="package-body">
+
+          <div class="package-tag">Program Umroh</div>
+
+          <h3>Umroh Reguler</h3>
+
+          <p>
+            Program perjalanan Umroh untuk jamaah yang
+            menginginkan persiapan perjalanan yang terencana.
+          </p>
+
+          <ul class="features">
+            <li>Program perjalanan Umroh</li>
+            <li>Akomodasi sesuai paket</li>
+            <li>Pembimbing ibadah</li>
+            <li>Transportasi sesuai program</li>
+          </ul>
+
+          <div class="package-price">
+            Konsultasi
+            <small> untuk informasi harga</small>
+          </div>
+
+          <a
+            class="btn btn-gold"
+            target="_blank"
+            href="https://wa.me/6283870874140?text=Assalamu%27alaikum%2C%20saya%20ingin%20informasi%20Paket%20Umroh%20Reguler.">
+            Tanya Paket
+          </a>
+
+        </div>
+      </div>
+
+
+      <div class="package reveal">
+
+        <div class="package-top">
+          <div class="package-symbol">
+            <span>🌙</span>
+          </div>
+        </div>
+
+        <div class="package-body">
+
+          <div class="package-tag">Program Khusus</div>
+
+          <h3>Umroh Ramadhan</h3>
+
+          <p>
+            Program Umroh pada bulan Ramadhan untuk jamaah
+            yang ingin memperbanyak ibadah di Tanah Suci.
+          </p>
+
+          <ul class="features">
+            <li>Program Ramadhan</li>
+            <li>Akomodasi sesuai paket</li>
+            <li>Pembimbing ibadah</li>
+            <li>Transportasi sesuai program</li>
+          </ul>
+
+          <div class="package-price">
+            Konsultasi
+            <small> untuk informasi harga</small>
+          </div>
+
+          <a
+            class="btn btn-gold"
+            target="_blank"
+            href="https://wa.me/6283870874140?text=Assalamu%27alaikum%2C%20saya%20ingin%20informasi%20Paket%20Umroh%20Ramadhan.">
+            Tanya Paket
+          </a>
+
+        </div>
+      </div>
+
+
+      <div class="package reveal">
+
+        <div class="package-top">
+          <div class="package-symbol">
+            <span>🕌</span>
+          </div>
+        </div>
+
+        <div class="package-body">
+
+          <div class="package-tag">Program Haji</div>
+
+          <h3>Program Haji</h3>
+
+          <p>
+            Informasi dan konsultasi mengenai program Haji
+            sesuai ketentuan dan program yang tersedia.
+          </p>
+
+          <ul class="features">
+            <li>Informasi program Haji</li>
+            <li>Konsultasi perjalanan</li>
+            <li>Pendampingan informasi</li>
+            <li>Program sesuai ketentuan</li>
+          </ul>
+
+          <div class="package-price">
+            Konsultasi
+            <small> dengan tim kami</small>
+          </div>
+
+          <a
+            class="btn btn-gold"
+            target="_blank"
+            href="https://wa.me/6283870874140?text=Assalamu%27alaikum%2C%20saya%20ingin%20konsultasi%20mengenai%20Program%20Haji.">
+            Konsultasi
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- TENTANG -->
+
+<section id="tentang">
+
+  <div class="container">
+
+    <div class="about">
+
+      <div class="about-visual reveal">
+
+        <div class="about-emblem">
+          <div class="moon">☪</div>
           <strong>AL UBAIDILLAH</strong>
           <span>TRAVEL</span>
         </div>
+
+      </div>
+
+      <div class="about-copy reveal">
+
+        <small>TENTANG KAMI</small>
+
+        <h2>
+          Melayani dengan Amanah,
+          Mendampingi dengan Nyaman.
+        </h2>
+
+        <p>
+          AL UBAIDILLAH TRAVEL dibangun untuk memberikan
+          kemudahan bagi masyarakat dalam memperoleh informasi
+          dan melakukan konsultasi perjalanan ibadah.
+        </p>
+
+        <p>
+          Kami mengutamakan komunikasi yang jelas,
+          pelayanan yang ramah dan persiapan perjalanan
+          yang terencana.
+        </p>
+
+        <ul class="check-list">
+          <li>Informasi program yang mudah dipahami</li>
+          <li>Konsultasi langsung melalui WhatsApp</li>
+          <li>Pelayanan yang ramah dan personal</li>
+          <li>Fokus pada kenyamanan calon jamaah</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- JADWAL -->
+
+<section id="jadwal">
+
+  <div class="container">
+
+    <div class="section-head reveal">
+      <small>Keberangkatan</small>
+      <h2>Jadwal Perjalanan</h2>
+      <p>
+        Jadwal di bawah merupakan tampilan contoh.
+        Jadwal resmi dapat dimasukkan setelah tersedia.
+      </p>
+    </div>
+
+    <div class="schedule">
+
+      <div class="schedule-card reveal">
+        <span class="month">JADWAL 01</span>
+        <h3>Umroh Reguler</h3>
+        <p>Informasi tanggal keberangkatan melalui konsultasi.</p>
+        <div class="schedule-status">
+          ✦ Tersedia untuk konsultasi
+        </div>
+      </div>
+
+      <div class="schedule-card reveal">
+        <span class="month">JADWAL 02</span>
+        <h3>Umroh Ramadhan</h3>
+        <p>Program khusus bulan Ramadhan sesuai jadwal resmi.</p>
+        <div class="schedule-status">
+          ✦ Hubungi untuk informasi
+        </div>
+      </div>
+
+      <div class="schedule-card reveal">
+        <span class="month">PROGRAM HAJI</span>
+        <h3>Haji</h3>
+        <p>Informasi program dan ketentuan melalui konsultasi.</p>
+        <div class="schedule-status">
+          ✦ Konsultasi tersedia
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FASILITAS -->
+
+<section>
+
+  <div class="container">
+
+    <div class="section-head reveal">
+      <small>Persiapan Perjalanan</small>
+      <h2>Informasi Fasilitas</h2>
+      <p>
+        Fasilitas berikut adalah contoh struktur website.
+        Detail sebenarnya mengikuti masing-masing paket resmi.
+      </p>
+    </div>
+
+    <div class="facilities">
+
+      <div class="facility reveal">
+        <div class="facility-icon">🏨</div>
+        <h3>Akomodasi</h3>
+        <p>Hotel sesuai program</p>
+      </div>
+
+      <div class="facility reveal">
+        <div class="facility-icon">✈️</div>
+        <h3>Penerbangan</h3>
+        <p>Sesuai paket perjalanan</p>
+      </div>
+
+      <div class="facility reveal">
+        <div class="facility-icon">🚌</div>
+        <h3>Transportasi</h3>
+        <p>Sesuai program perjalanan</p>
+      </div>
+
+      <div class="facility reveal">
+        <div class="facility-icon">📿</div>
+        <h3>Pembimbing</h3>
+        <p>Sesuai program resmi</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ALUR -->
+
+<section>
+
+  <div class="container">
+
+    <div class="section-head reveal">
+      <small>Cara Memulai</small>
+      <h2>Empat Langkah Menuju Perjalanan Anda</h2>
+      <p>
+        Mulai dengan konsultasi dan dapatkan informasi
+        yang sesuai dengan kebutuhan Anda.
+      </p>
+    </div>
+
+    <div class="steps">
+
+      <div class="step reveal">
+        <div class="step-number">01</div>
+        <h3>Konsultasi</h3>
+        <p>Hubungi kami melalui WhatsApp.</p>
+      </div>
+
+      <div class="step reveal">
+        <div class="step-number">02</div>
+        <h3>Pilih Program</h3>
+        <p>Tentukan program perjalanan yang sesuai.</p>
+      </div>
+
+      <div class="step reveal">
+        <div class="step-number">03</div>
+        <h3>Persiapan</h3>
+        <p>Dapatkan informasi persiapan keberangkatan.</p>
+      </div>
+
+      <div class="step reveal">
+        <div class="step-number">04</div>
+        <h3>Keberangkatan</h3>
+        <p>Persiapkan perjalanan ibadah Anda.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- TESTIMONI -->
+
+<section>
+
+  <div class="container">
+
+    <div class="section-head reveal">
+      <small>Testimoni</small>
+      <h2>Pengalaman Jamaah</h2>
+      <p>
+        Area ini nantinya dapat diganti dengan testimoni
+        asli dari jamaah.
+      </p>
+    </div>
+
+    <div class="testimonials">
+
+      <div class="testimonial reveal">
+        <div class="stars">★★★★★</div>
+        <p>
+          “Pelayanannya ramah dan informasinya mudah dipahami.
+          Semoga segera bisa berangkat Umroh.”
+        </p>
+        <div class="person">— Calon Jamaah</div>
+      </div>
+
+      <div class="testimonial reveal">
+        <div class="stars">★★★★★</div>
+        <p>
+          “Konsultasi melalui WhatsApp sangat membantu
+          mendapatkan informasi perjalanan.”
+        </p>
+        <div class="person">— Calon Jamaah</div>
+      </div>
+
+      <div class="testimonial reveal">
+        <div class="stars">★★★★★</div>
+        <p>
+          “Semoga AL UBAIDILLAH TRAVEL semakin maju
+          dan dapat membantu banyak jamaah.”
+        </p>
+        <div class="person">— Jamaah</div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FAQ -->
+
+<section id="faq">
+
+  <div class="container">
+
+    <div class="section-head reveal">
+      <small>Pertanyaan Umum</small>
+      <h2>FAQ</h2>
+      <p>
+        Beberapa pertanyaan yang umum ditanyakan calon jamaah.
+      </p>
+    </div>
+
+    <div class="faq">
+
+      <details class="reveal">
+        <summary>Bagaimana cara mendapatkan informasi paket?</summary>
+        <p>
+          Silakan hubungi AL UBAIDILLAH TRAVEL melalui WhatsApp
+          untuk mendapatkan informasi program yang tersedia.
+        </p>
+      </details>
+
+      <details class="reveal">
+        <summary>Apakah tersedia program Umroh?</summary>
+        <p>
+          Website ini menyediakan struktur informasi untuk
+          program Umroh. Detail paket dan jadwal mengikuti
+          informasi resmi yang tersedia.
+        </p>
+      </details>
+
+      <details class="reveal">
+        <summary>Apakah tersedia konsultasi Haji?</summary>
+        <p>
+          Ya. Calon jamaah dapat menghubungi kami untuk
+          mendapatkan informasi dan konsultasi mengenai
+          program Haji yang tersedia.
+        </p>
+      </details>
+
+      <details class="reveal">
+        <summary>Bagaimana cara menghubungi travel?</summary>
+        <p>
+          Anda dapat menghubungi kami melalui WhatsApp
+          083870874140 atau email
+          adnanfarisi007@gmail.com.
+        </p>
+      </details>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section>
+
+  <div class="container">
+
+    <div class="cta reveal">
+
+      <h2>Sudah Siap Menuju Baitullah?</h2>
+
+      <p>
+        Konsultasikan rencana perjalanan ibadah Anda
+        bersama AL UBAIDILLAH TRAVEL.
+      </p>
+
+      <a
+        class="btn btn-gold"
+        target="_blank"
+        href="https://wa.me/6283870874140?text=Assalamu%27alaikum%20AL%20UBAIDILLAH%20TRAVEL%2C%20saya%20ingin%20konsultasi%20perjalanan%20ibadah.">
+        📱 Konsultasi Sekarang
       </a>
 
-      <button class="menu-btn" onclick="toggleMenu()">☰</button>
-
-      <nav id="mainNav">
-        <a href="#beranda">Beranda</a>
-        <a href="#paket">Paket</a>
-        <a href="#tentang">Tentang</a>
-        <a href="#keunggulan">Keunggulan</a>
-        <a href="#testimoni">Testimoni</a>
-        <a href="#kontak" class="nav-cta">Konsultasi</a>
-      </nav>
-
     </div>
-  </header>
 
+  </div>
 
-  <!-- ================= HERO ================= -->
+</section>
 
-  <main>
 
-    <section class="hero" id="beranda">
+<!-- KONTAK -->
 
-      <div class="container">
+<section id="kontak">
 
-        <div class="hero-content">
+  <div class="container">
 
-          <div class="badge">
-            🕋 UMROH • HAJI • WISATA HALAL
-          </div>
+    <div class="section-head reveal">
+      <small>Hubungi Kami</small>
+      <h2>AL UBAIDILLAH TRAVEL</h2>
+      <p>
+        Silakan hubungi kami untuk konsultasi dan informasi
+        program perjalanan.
+      </p>
+    </div>
 
-          <h1>
-            Wujudkan Perjalanan Ibadah
-            <span>Impian Anda.</span>
-          </h1>
+    <div class="contact-grid">
 
-          <p>
-            AL UBAIDILLAH TRAVEL hadir untuk membantu Anda mempersiapkan
-            perjalanan Umroh, Haji dan wisata halal dengan pelayanan
-            yang amanah, nyaman dan profesional.
-          </p>
+      <a
+        class="contact-card reveal"
+        target="_blank"
+        href="https://wa.me/6283870874140">
 
-          <div class="hero-buttons">
+        <div class="contact-icon">📱</div>
+        <h3>WhatsApp</h3>
+        <p>083870874140</p>
 
-            <a
-              href="https://wa.me/6283870874140?text=Assalamu%27alaikum%20AL%20UBAIDILLAH%20TRAVEL%2C%20saya%20ingin%20konsultasi%20mengenai%20paket%20perjalanan."
-              target="_blank"
-              class="btn btn-gold">
-              📱 Konsultasi WhatsApp
-            </a>
+      </a>
 
-            <a href="#paket" class="btn btn-outline">
-              Lihat Paket →
-            </a>
+      <a
+        class="contact-card reveal"
+        href="mailto:adnanfarisi007@gmail.com">
 
-          </div>
+        <div class="contact-icon">📧</div>
+        <h3>Email</h3>
+        <p>adnanfarisi007@gmail.com</p>
 
-          <div class="hero-info">
+      </a>
 
-            <div>
-              <strong>Umroh</strong>
-              <span>Paket perjalanan ibadah</span>
-            </div>
+      <div class="contact-card reveal">
 
-            <div>
-              <strong>Haji</strong>
-              <span>Program perjalanan Haji</span>
-            </div>
+        <div class="contact-icon">🕋</div>
+        <h3>Layanan</h3>
+        <p>Umroh • Haji • Wisata Halal</p>
 
-            <div>
-              <strong>Halal</strong>
-              <span>Wisata bernuansa Islami</span>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ================= PAKET ================= -->
-
-    <section id="paket">
-
-      <div class="container">
-
-        <div class="section-title">
-          <small>Pilihan Perjalanan</small>
-          <h2>Paket Ibadah</h2>
-          <p>
-            Pilihan program yang dapat disesuaikan dengan kebutuhan
-            dan rencana perjalanan Anda.
-          </p>
-        </div>
-
-        <div class="packages">
-
-          <div class="package">
-
-            <div class="package-top">
-              🕋
-            </div>
-
-            <div class="package-body">
-
-              <div class="package-label">
-                Umroh
-              </div>
-
-              <h3>Umroh Reguler</h3>
-
-              <p>
-                Program Umroh untuk Anda yang ingin menjalankan
-                ibadah dengan nyaman dan terencana.
-              </p>
-
-              <ul>
-                <li>Program perjalanan Umroh</li>
-                <li>Akomodasi sesuai paket</li>
-                <li>Pembimbing ibadah</li>
-                <li>Transportasi sesuai program</li>
-              </ul>
-
-              <div class="price">
-                Hubungi Kami
-                <span>untuk harga terbaru</span>
-              </div>
-
-              <a
-                href="https://wa.me/6283870874140?text=Assalamu%27alaikum%2C%20saya%20ingin%20informasi%20Paket%20Umroh%20Reguler."
-                target="_blank"
-                class="btn btn-gold">
-                Tanya Paket
-              </a>
-
-            </div>
-
-          </div>
-
-
-          <div class="package">
-
-            <div class="package-top">
-              🌙
-            </div>
-
-            <div class="package-body">
-
-              <div class="package-label">
-                Umroh
-              </div>
-
-              <h3>Umroh Ramadhan</h3>
-
-              <p>
-                Rasakan pengalaman ibadah Umroh di bulan penuh
-                keberkahan bersama keluarga dan orang terdekat.
-              </p>
-
-              <ul>
-                <li>Program Ramadhan</li>
-                <li>Akomodasi sesuai paket</li>
-                <li>Pembimbing ibadah</li>
-                <li>Transportasi sesuai program</li>
-              </ul>
-
-              <div class="price">
-                Hubungi Kami
-                <span>untuk harga terbaru</span>
-              </div>
-
-              <a
-                href="https://wa.me/6283870874140?text=Assalamu%27alaikum%2C%20saya%20ingin%20informasi%20Paket%20Umroh%20Ramadhan."
-                target="_blank"
-                class="btn btn-gold">
-                Tanya Paket
-              </a>
-
-            </div>
-
-          </div>
-
-
-          <div class="package">
-
-            <div class="package-top">
-              🕌
-            </div>
-
-            <div class="package-body">
-
-              <div class="package-label">
-                Haji
-              </div>
-
-              <h3>Program Haji</h3>
-
-              <p>
-                Informasi dan konsultasi program perjalanan Haji
-                sesuai ketentuan dan program yang tersedia.
-              </p>
-
-              <ul>
-                <li>Informasi program Haji</li>
-                <li>Konsultasi perjalanan</li>
-                <li>Pendampingan informasi</li>
-                <li>Program sesuai ketentuan</li>
-              </ul>
-
-              <div class="price">
-                Konsultasi
-                <span>dengan tim kami</span>
-              </div>
-
-              <a
-                href="https://wa.me/6283870874140?text=Assalamu%27alaikum%2C%20saya%20ingin%20konsultasi%20mengenai%20Program%20Haji."
-                target="_blank"
-                class="btn btn-gold">
-                Konsultasi
-              </a>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ================= TENTANG ================= -->
-
-    <section id="tentang">
-
-      <div class="container">
-
-        <div class="about-grid">
-
-          <div class="about-box">
-            <div class="big-icon">🕋</div>
-
-            <h3>
-              AL UBAIDILLAH TRAVEL
-            </h3>
-
-            <p style="color:var(--muted); margin-top:10px;">
-              Umroh • Haji • Wisata Halal
-            </p>
-          </div>
-
-          <div class="about-text">
-
-            <small style="color:var(--gold-light); letter-spacing:3px;">
-              TENTANG KAMI
-            </small>
-
-            <h2>
-              Melayani dengan Amanah.
-            </h2>
-
-            <p>
-              AL UBAIDILLAH TRAVEL dibangun dengan semangat untuk
-              membantu masyarakat mempersiapkan perjalanan ibadah
-              dengan informasi yang jelas dan pelayanan yang nyaman.
-            </p>
-
-            <p>
-              Kami mengutamakan komunikasi yang baik, pendampingan
-              dan pelayanan kepada calon jamaah dari tahap konsultasi
-              hingga persiapan keberangkatan.
-            </p>
-
-            <ul class="checks">
-              <li>Pelayanan yang ramah dan profesional</li>
-              <li>Konsultasi perjalanan melalui WhatsApp</li>
-              <li>Informasi paket yang transparan</li>
-              <li>Fokus pada kenyamanan jamaah</li>
-            </ul>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ================= KEUNGGULAN ================= -->
-
-    <section id="keunggulan">
-
-      <div class="container">
-
-        <div class="section-title">
-          <small>Mengapa Kami</small>
-          <h2>Keunggulan Kami</h2>
-          <p>
-            Kami ingin perjalanan ibadah Anda dimulai dengan
-            persiapan yang baik.
-          </p>
-        </div>
-
-        <div class="cards">
-
-          <div class="card">
-            <div class="card-icon">🤝</div>
-            <h3>Amanah</h3>
-            <p>
-              Mengutamakan komunikasi dan pelayanan yang
-              bertanggung jawab kepada calon jamaah.
-            </p>
-          </div>
-
-          <div class="card">
-            <div class="card-icon">📋</div>
-            <h3>Terencana</h3>
-            <p>
-              Membantu calon jamaah mendapatkan informasi
-              perjalanan secara lebih terstruktur.
-            </p>
-          </div>
-
-          <div class="card">
-            <div class="card-icon">💬</div>
-            <h3>Mudah Konsultasi</h3>
-            <p>
-              Hubungi tim kami melalui WhatsApp untuk
-              mendapatkan informasi dan konsultasi.
-            </p>
-          </div>
-
-          <div class="card">
-            <div class="card-icon">🕌</div>
-            <h3>Nuansa Islami</h3>
-            <p>
-              Menghadirkan pengalaman komunikasi dan informasi
-              perjalanan yang bernuansa Islami.
-            </p>
-          </div>
-
-          <div class="card">
-            <div class="card-icon">✈️</div>
-            <h3>Perjalanan Nyaman</h3>
-            <p>
-              Informasi perjalanan disiapkan agar calon jamaah
-              dapat mempersiapkan keberangkatan dengan baik.
-            </p>
-          </div>
-
-          <div class="card">
-            <div class="card-icon">⭐</div>
-            <h3>Pelayanan Personal</h3>
-            <p>
-              Setiap calon jamaah dapat berkonsultasi sesuai
-              kebutuhan perjalanan masing-masing.
-            </p>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ================= CARA DAFTAR ================= -->
-
-    <section>
-
-      <div class="container">
-
-        <div class="section-title">
-          <small>Proses Konsultasi</small>
-          <h2>Mulai Perjalanan Anda</h2>
-          <p>
-            Konsultasi terlebih dahulu sebelum menentukan paket
-            perjalanan yang sesuai.
-          </p>
-        </div>
-
-        <div class="steps">
-
-          <div class="step">
-            <div class="step-number">01</div>
-            <h3>Konsultasi</h3>
-            <p>
-              Hubungi kami melalui WhatsApp.
-            </p>
-          </div>
-
-          <div class="step">
-            <div class="step-number">02</div>
-            <h3>Pilih Program</h3>
-            <p>
-              Tentukan program perjalanan yang sesuai.
-            </p>
-          </div>
-
-          <div class="step">
-            <div class="step-number">03</div>
-            <h3>Persiapan</h3>
-            <p>
-              Dapatkan informasi persiapan keberangkatan.
-            </p>
-          </div>
-
-          <div class="step">
-            <div class="step-number">04</div>
-            <h3>Berangkat</h3>
-            <p>
-              Persiapkan perjalanan ibadah Anda.
-            </p>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ================= TESTIMONI ================= -->
-
-    <section id="testimoni">
-
-      <div class="container">
-
-        <div class="section-title">
-          <small>Pengalaman Jamaah</small>
-          <h2>Testimoni</h2>
-          <p>
-            Bagian ini nantinya dapat diisi dengan testimoni
-            jamaah asli setelah website mulai digunakan.
-          </p>
-        </div>
-
-        <div class="testimonials">
-
-          <div class="testimonial">
-            <div class="stars">★★★★★</div>
-            <p>
-              “Pelayanan sangat ramah dan informasinya mudah
-              dipahami. Semoga bisa segera berangkat Umroh.”
-            </p>
-            <div class="person">
-              — Jamaah Al Ubaidillah
-            </div>
-          </div>
-
-          <div class="testimonial">
-            <div class="stars">★★★★★</div>
-            <p>
-              “Konsultasinya mudah melalui WhatsApp dan
-              mendapatkan penjelasan yang cukup jelas.”
-            </p>
-            <div class="person">
-              — Calon Jamaah
-            </div>
-          </div>
-
-          <div class="testimonial">
-            <div class="stars">★★★★★</div>
-            <p>
-              “Semoga AL UBAIDILLAH TRAVEL semakin maju dan
-              bisa membantu lebih banyak jamaah.”
-            </p>
-            <div class="person">
-              — Jamaah
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ================= GALERI ================= -->
-
-    <section>
-
-      <div class="container">
-
-        <div class="section-title">
-          <small>Galeri</small>
-          <h2>Perjalanan Penuh Makna</h2>
-          <p>
-            Foto asli Makkah, Madinah dan dokumentasi jamaah
-            dapat ditambahkan pada versi berikutnya.
-          </p>
-        </div>
-
-        <div class="gallery">
-
-          <div class="gallery-item">🕋</div>
-          <div class="gallery-item">🕌</div>
-          <div class="gallery-item">🌙</div>
-          <div class="gallery-item">📿</div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ================= CTA ================= -->
-
-    <section>
-
-      <div class="container">
-
-        <div class="cta">
-
-          <h2>
-            Sudah Siap Merencanakan Perjalanan Ibadah?
-          </h2>
-
-          <p>
-            Jangan ragu untuk berkonsultasi. Tim AL UBAIDILLAH
-            TRAVEL siap membantu memberikan informasi mengenai
-            program Umroh dan Haji.
-          </p>
-
-          <a
-            href="https://wa.me/6283870874140?text=Assalamu%27alaikum%20AL%20UBAIDILLAH%20TRAVEL%2C%20saya%20ingin%20konsultasi%20perjalanan%20ibadah."
-            target="_blank"
-            class="btn btn-gold">
-            📱 Konsultasi Sekarang
-          </a>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ================= KONTAK ================= -->
-
-    <section id="kontak">
-
-      <div class="container">
-
-        <div class="section-title">
-          <small>Hubungi Kami</small>
-          <h2>Kontak AL UBAIDILLAH TRAVEL</h2>
-          <p>
-            Silakan hubungi kami untuk konsultasi dan informasi
-            program perjalanan.
-          </p>
-        </div>
-
-        <div class="contact-grid">
-
-          <a
-            href="https://wa.me/6283870874140"
-            target="_blank"
-            class="contact-card">
-
-            <div class="icon">📱</div>
-            <h3>WhatsApp</h3>
-            <p>083870874140</p>
-
-          </a>
-
-          <a
-            href="mailto:adnanfarisi007@gmail.com"
-            class="contact-card">
-
-            <div class="icon">📧</div>
-            <h3>Email</h3>
-            <p>adnanfarisi007@gmail.com</p>
-
-          </a>
-
-          <div class="contact-card">
-
-            <div class="icon">🕋</div>
-            <h3>Layanan</h3>
-            <p>
-              Umroh • Haji • Wisata Halal
-            </p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-  </main>
-
-
-  <!-- ================= FOOTER ================= -->
-
-  <footer>
-
-    <div class="container footer-inner">
-
-      <div class="footer-brand">
-        AL UBAIDILLAH TRAVEL
-      </div>
-
-      <div class="footer-text">
-        © 2026 AL UBAIDILLAH TRAVEL. All Rights Reserved.
-      </div>
-
-      <div class="footer-text">
-        Umroh • Haji • Wisata Halal
       </div>
 
     </div>
 
-  </footer>
+  </div>
+
+</section>
+
+</main>
 
 
-  <!-- ================= FLOATING WHATSAPP ================= -->
+<footer>
 
-  <a
-    class="wa-float"
-    href="https://wa.me/6283870874140?text=Assalamu%27alaikum%20AL%20UBAIDILLAH%20TRAVEL%2C%20saya%20ingin%20konsultasi."
-    target="_blank"
-    aria-label="WhatsApp">
-    ☎
-  </a>
+  <div class="container footer">
+
+    <div class="footer-name">
+      AL UBAIDILLAH TRAVEL
+    </div>
+
+    <div class="footer-copy">
+      © 2026 AL UBAIDILLAH TRAVEL • Umroh • Haji • Wisata Halal
+    </div>
+
+  </div>
+
+</footer>
 
 
-  <!-- ================= JAVASCRIPT ================= -->
+<a
+  class="wa"
+  target="_blank"
+  aria-label="WhatsApp AL Ubaidillah Travel"
+  href="https://wa.me/6283870874140?text=Assalamu%27alaikum%20AL%20UBAIDILLAH%20TRAVEL%2C%20saya%20ingin%20konsultasi.">
+  ☎
+</a>
 
-  <script>
 
-    function toggleMenu() {
-      document.getElementById("mainNav").classList.toggle("active");
-    }
+<script>
 
-    document.querySelectorAll("nav a").forEach(function(link) {
-      link.addEventListener("click", function() {
-        document.getElementById("mainNav").classList.remove("active");
-      });
+function toggleMenu(){
+  document.getElementById("nav").classList.toggle("active");
+}
+
+document.querySelectorAll("nav a").forEach(function(link){
+  link.addEventListener("click",function(){
+    document.getElementById("nav").classList.remove("active");
+  });
+});
+
+
+const observer = new IntersectionObserver(
+  function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add("show");
+      }
     });
+  },
+  {
+    threshold:.12
+  }
+);
 
-  </script>
+document.querySelectorAll(".reveal").forEach(function(element){
+  observer.observe(element);
+});
+
+</script>
 
 </body>
 </html>
+```
